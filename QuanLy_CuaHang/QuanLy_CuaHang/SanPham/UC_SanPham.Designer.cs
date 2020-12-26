@@ -32,8 +32,8 @@ namespace QuanLy_CuaHang.SanPham
             this.tab_QL_SanPham = new System.Windows.Forms.TabControl();
             this.tab_SanPham = new System.Windows.Forms.TabPage();
             this.tab_GiaSP = new System.Windows.Forms.TabPage();
-            this.tab_HangSX = new System.Windows.Forms.TabPage();
-            this.tab_LoaiSP = new System.Windows.Forms.TabPage();
+            this.tab_HangSX_NCC = new System.Windows.Forms.TabPage();
+            this.tab_DanhM_LoaiSP = new System.Windows.Forms.TabPage();
             this.tab_QL_SanPham.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,8 +41,8 @@ namespace QuanLy_CuaHang.SanPham
             // 
             this.tab_QL_SanPham.Controls.Add(this.tab_SanPham);
             this.tab_QL_SanPham.Controls.Add(this.tab_GiaSP);
-            this.tab_QL_SanPham.Controls.Add(this.tab_HangSX);
-            this.tab_QL_SanPham.Controls.Add(this.tab_LoaiSP);
+            this.tab_QL_SanPham.Controls.Add(this.tab_HangSX_NCC);
+            this.tab_QL_SanPham.Controls.Add(this.tab_DanhM_LoaiSP);
             this.tab_QL_SanPham.ItemSize = new System.Drawing.Size(58, 30);
             this.tab_QL_SanPham.Location = new System.Drawing.Point(0, 0);
             this.tab_QL_SanPham.Name = "tab_QL_SanPham";
@@ -71,25 +71,25 @@ namespace QuanLy_CuaHang.SanPham
             this.tab_GiaSP.Text = "Giá sản phẩm";
             this.tab_GiaSP.UseVisualStyleBackColor = true;
             // 
-            // tab_HangSX
+            // tab_HangSX_NCC
             // 
-            this.tab_HangSX.Location = new System.Drawing.Point(4, 34);
-            this.tab_HangSX.Name = "tab_HangSX";
-            this.tab_HangSX.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_HangSX.Size = new System.Drawing.Size(886, 523);
-            this.tab_HangSX.TabIndex = 2;
-            this.tab_HangSX.Text = "Hãng sản xuất & Nhà cung cấp";
-            this.tab_HangSX.UseVisualStyleBackColor = true;
+            this.tab_HangSX_NCC.Location = new System.Drawing.Point(4, 34);
+            this.tab_HangSX_NCC.Name = "tab_HangSX_NCC";
+            this.tab_HangSX_NCC.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_HangSX_NCC.Size = new System.Drawing.Size(886, 523);
+            this.tab_HangSX_NCC.TabIndex = 2;
+            this.tab_HangSX_NCC.Text = "Hãng sản xuất & Nhà cung cấp";
+            this.tab_HangSX_NCC.UseVisualStyleBackColor = true;
             // 
-            // tab_LoaiSP
+            // tab_DanhM_LoaiSP
             // 
-            this.tab_LoaiSP.Location = new System.Drawing.Point(4, 34);
-            this.tab_LoaiSP.Name = "tab_LoaiSP";
-            this.tab_LoaiSP.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_LoaiSP.Size = new System.Drawing.Size(886, 523);
-            this.tab_LoaiSP.TabIndex = 3;
-            this.tab_LoaiSP.Text = "Danh muc & Loại sản phẩm";
-            this.tab_LoaiSP.UseVisualStyleBackColor = true;
+            this.tab_DanhM_LoaiSP.Location = new System.Drawing.Point(4, 34);
+            this.tab_DanhM_LoaiSP.Name = "tab_DanhM_LoaiSP";
+            this.tab_DanhM_LoaiSP.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_DanhM_LoaiSP.Size = new System.Drawing.Size(886, 523);
+            this.tab_DanhM_LoaiSP.TabIndex = 3;
+            this.tab_DanhM_LoaiSP.Text = "Danh muc & Loại sản phẩm";
+            this.tab_DanhM_LoaiSP.UseVisualStyleBackColor = true;
             // 
             // UC_SanPham
             // 
@@ -109,8 +109,8 @@ namespace QuanLy_CuaHang.SanPham
         private System.Windows.Forms.TabControl tab_QL_SanPham;
         private System.Windows.Forms.TabPage tab_SanPham;
         private System.Windows.Forms.TabPage tab_GiaSP;
-        private System.Windows.Forms.TabPage tab_HangSX;
-        private System.Windows.Forms.TabPage tab_LoaiSP;
+        private System.Windows.Forms.TabPage tab_HangSX_NCC;
+        private System.Windows.Forms.TabPage tab_DanhM_LoaiSP;
         private System.Windows.Forms.TabPage tab_DanhMuc;
     }
 }

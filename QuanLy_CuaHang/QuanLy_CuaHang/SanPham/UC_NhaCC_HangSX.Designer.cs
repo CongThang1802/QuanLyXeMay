@@ -29,38 +29,38 @@ namespace QuanLy_CuaHang.SanPham
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_NhaCC_HangSX));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_LamMoi_NCC = new Guna.UI.WinForms.GunaCircleButton();
-            this.btn_Xoa_NCC = new Guna.UI.WinForms.GunaCircleButton();
-            this.btn_Sua_NCC = new Guna.UI.WinForms.GunaCircleButton();
-            this.btn_Them_NCC = new Guna.UI.WinForms.GunaCircleButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_LamMoi_HSX = new Guna.UI.WinForms.GunaCircleButton();
-            this.btn_Xoa_HSX = new Guna.UI.WinForms.GunaCircleButton();
-            this.btn_Sua_HSX = new Guna.UI.WinForms.GunaCircleButton();
-            this.btn_Them_HSX = new Guna.UI.WinForms.GunaCircleButton();
-            this.dgv_HangSX = new Guna.UI.WinForms.GunaDataGridView();
             this.dgv_NhaCC = new Guna.UI.WinForms.GunaDataGridView();
+            this.btn_LamMoi_DM = new Guna.UI.WinForms.GunaCircleButton();
+            this.btn_Xoa_DM = new Guna.UI.WinForms.GunaCircleButton();
+            this.btn_Sua_DM = new Guna.UI.WinForms.GunaCircleButton();
+            this.btn_Them_DM = new Guna.UI.WinForms.GunaCircleButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgv_HangSX = new Guna.UI.WinForms.GunaDataGridView();
+            this.btn_LamMoi_LSP = new Guna.UI.WinForms.GunaCircleButton();
+            this.btn_Xoa_LSP = new Guna.UI.WinForms.GunaCircleButton();
+            this.btn_Sua_LSP = new Guna.UI.WinForms.GunaCircleButton();
+            this.btn_Them_LSP = new Guna.UI.WinForms.GunaCircleButton();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_NhaCC)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HangSX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_NhaCC)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgv_NhaCC);
-            this.groupBox1.Controls.Add(this.btn_LamMoi_NCC);
-            this.groupBox1.Controls.Add(this.btn_Xoa_NCC);
-            this.groupBox1.Controls.Add(this.btn_Sua_NCC);
-            this.groupBox1.Controls.Add(this.btn_Them_NCC);
+            this.groupBox1.Controls.Add(this.btn_LamMoi_DM);
+            this.groupBox1.Controls.Add(this.btn_Xoa_DM);
+            this.groupBox1.Controls.Add(this.btn_Sua_DM);
+            this.groupBox1.Controls.Add(this.btn_Them_DM);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
@@ -69,293 +69,34 @@ namespace QuanLy_CuaHang.SanPham
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhà cung cấp";
             // 
-            // btn_LamMoi_NCC
-            // 
-            this.btn_LamMoi_NCC.AnimationHoverSpeed = 0.07F;
-            this.btn_LamMoi_NCC.AnimationSpeed = 0.03F;
-            this.btn_LamMoi_NCC.BaseColor = System.Drawing.Color.White;
-            this.btn_LamMoi_NCC.BorderColor = System.Drawing.Color.Black;
-            this.btn_LamMoi_NCC.BorderSize = 1;
-            this.btn_LamMoi_NCC.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_LamMoi_NCC.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_LamMoi_NCC.ForeColor = System.Drawing.Color.White;
-            this.btn_LamMoi_NCC.Image = ((System.Drawing.Image)(resources.GetObject("btn_LamMoi_NCC.Image")));
-            this.btn_LamMoi_NCC.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_LamMoi_NCC.Location = new System.Drawing.Point(12, 157);
-            this.btn_LamMoi_NCC.Name = "btn_LamMoi_NCC";
-            this.btn_LamMoi_NCC.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_LamMoi_NCC.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_LamMoi_NCC.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_LamMoi_NCC.OnHoverImage = null;
-            this.btn_LamMoi_NCC.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_LamMoi_NCC.Size = new System.Drawing.Size(35, 35);
-            this.btn_LamMoi_NCC.TabIndex = 13;
-            this.btn_LamMoi_NCC.Click += new System.EventHandler(this.btn_LamMoi_NCC_Click);
-            // 
-            // btn_Xoa_NCC
-            // 
-            this.btn_Xoa_NCC.AnimationHoverSpeed = 0.07F;
-            this.btn_Xoa_NCC.AnimationSpeed = 0.03F;
-            this.btn_Xoa_NCC.BaseColor = System.Drawing.Color.White;
-            this.btn_Xoa_NCC.BorderColor = System.Drawing.Color.Black;
-            this.btn_Xoa_NCC.BorderSize = 1;
-            this.btn_Xoa_NCC.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Xoa_NCC.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Xoa_NCC.ForeColor = System.Drawing.Color.White;
-            this.btn_Xoa_NCC.Image = ((System.Drawing.Image)(resources.GetObject("btn_Xoa_NCC.Image")));
-            this.btn_Xoa_NCC.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Xoa_NCC.Location = new System.Drawing.Point(12, 116);
-            this.btn_Xoa_NCC.Name = "btn_Xoa_NCC";
-            this.btn_Xoa_NCC.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Xoa_NCC.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Xoa_NCC.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Xoa_NCC.OnHoverImage = null;
-            this.btn_Xoa_NCC.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Xoa_NCC.Size = new System.Drawing.Size(35, 35);
-            this.btn_Xoa_NCC.TabIndex = 2;
-            this.btn_Xoa_NCC.Click += new System.EventHandler(this.btn_Xoa_NCC_Click);
-            // 
-            // btn_Sua_NCC
-            // 
-            this.btn_Sua_NCC.AnimationHoverSpeed = 0.07F;
-            this.btn_Sua_NCC.AnimationSpeed = 0.03F;
-            this.btn_Sua_NCC.BaseColor = System.Drawing.Color.White;
-            this.btn_Sua_NCC.BorderColor = System.Drawing.Color.Black;
-            this.btn_Sua_NCC.BorderSize = 1;
-            this.btn_Sua_NCC.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Sua_NCC.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Sua_NCC.ForeColor = System.Drawing.Color.White;
-            this.btn_Sua_NCC.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sua_NCC.Image")));
-            this.btn_Sua_NCC.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Sua_NCC.Location = new System.Drawing.Point(12, 75);
-            this.btn_Sua_NCC.Name = "btn_Sua_NCC";
-            this.btn_Sua_NCC.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Sua_NCC.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Sua_NCC.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Sua_NCC.OnHoverImage = null;
-            this.btn_Sua_NCC.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Sua_NCC.Size = new System.Drawing.Size(35, 35);
-            this.btn_Sua_NCC.TabIndex = 1;
-            this.btn_Sua_NCC.Click += new System.EventHandler(this.btn_Sua_NCC_Click);
-            // 
-            // btn_Them_NCC
-            // 
-            this.btn_Them_NCC.AnimationHoverSpeed = 0.07F;
-            this.btn_Them_NCC.AnimationSpeed = 0.03F;
-            this.btn_Them_NCC.BaseColor = System.Drawing.Color.White;
-            this.btn_Them_NCC.BorderColor = System.Drawing.Color.Black;
-            this.btn_Them_NCC.BorderSize = 1;
-            this.btn_Them_NCC.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Them_NCC.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Them_NCC.ForeColor = System.Drawing.Color.White;
-            this.btn_Them_NCC.Image = ((System.Drawing.Image)(resources.GetObject("btn_Them_NCC.Image")));
-            this.btn_Them_NCC.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Them_NCC.Location = new System.Drawing.Point(12, 34);
-            this.btn_Them_NCC.Name = "btn_Them_NCC";
-            this.btn_Them_NCC.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Them_NCC.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Them_NCC.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Them_NCC.OnHoverImage = null;
-            this.btn_Them_NCC.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Them_NCC.Size = new System.Drawing.Size(35, 35);
-            this.btn_Them_NCC.TabIndex = 0;
-            this.btn_Them_NCC.Click += new System.EventHandler(this.btn_Them_NCC_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dgv_HangSX);
-            this.groupBox2.Controls.Add(this.btn_LamMoi_HSX);
-            this.groupBox2.Controls.Add(this.btn_Xoa_HSX);
-            this.groupBox2.Controls.Add(this.btn_Sua_HSX);
-            this.groupBox2.Controls.Add(this.btn_Them_HSX);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(445, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(434, 515);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Hãng sản xuất";
-            // 
-            // btn_LamMoi_HSX
-            // 
-            this.btn_LamMoi_HSX.AnimationHoverSpeed = 0.07F;
-            this.btn_LamMoi_HSX.AnimationSpeed = 0.03F;
-            this.btn_LamMoi_HSX.BaseColor = System.Drawing.Color.White;
-            this.btn_LamMoi_HSX.BorderColor = System.Drawing.Color.Black;
-            this.btn_LamMoi_HSX.BorderSize = 1;
-            this.btn_LamMoi_HSX.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_LamMoi_HSX.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_LamMoi_HSX.ForeColor = System.Drawing.Color.White;
-            this.btn_LamMoi_HSX.Image = ((System.Drawing.Image)(resources.GetObject("btn_LamMoi_HSX.Image")));
-            this.btn_LamMoi_HSX.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_LamMoi_HSX.Location = new System.Drawing.Point(12, 157);
-            this.btn_LamMoi_HSX.Name = "btn_LamMoi_HSX";
-            this.btn_LamMoi_HSX.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_LamMoi_HSX.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_LamMoi_HSX.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_LamMoi_HSX.OnHoverImage = null;
-            this.btn_LamMoi_HSX.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_LamMoi_HSX.Size = new System.Drawing.Size(35, 35);
-            this.btn_LamMoi_HSX.TabIndex = 13;
-            this.btn_LamMoi_HSX.Click += new System.EventHandler(this.btn_LamMoi_HSX_Click);
-            // 
-            // btn_Xoa_HSX
-            // 
-            this.btn_Xoa_HSX.AnimationHoverSpeed = 0.07F;
-            this.btn_Xoa_HSX.AnimationSpeed = 0.03F;
-            this.btn_Xoa_HSX.BaseColor = System.Drawing.Color.White;
-            this.btn_Xoa_HSX.BorderColor = System.Drawing.Color.Black;
-            this.btn_Xoa_HSX.BorderSize = 1;
-            this.btn_Xoa_HSX.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Xoa_HSX.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Xoa_HSX.ForeColor = System.Drawing.Color.White;
-            this.btn_Xoa_HSX.Image = ((System.Drawing.Image)(resources.GetObject("btn_Xoa_HSX.Image")));
-            this.btn_Xoa_HSX.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Xoa_HSX.Location = new System.Drawing.Point(12, 116);
-            this.btn_Xoa_HSX.Name = "btn_Xoa_HSX";
-            this.btn_Xoa_HSX.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Xoa_HSX.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Xoa_HSX.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Xoa_HSX.OnHoverImage = null;
-            this.btn_Xoa_HSX.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Xoa_HSX.Size = new System.Drawing.Size(35, 35);
-            this.btn_Xoa_HSX.TabIndex = 2;
-            this.btn_Xoa_HSX.Click += new System.EventHandler(this.btn_Xoa_HSX_Click);
-            // 
-            // btn_Sua_HSX
-            // 
-            this.btn_Sua_HSX.AnimationHoverSpeed = 0.07F;
-            this.btn_Sua_HSX.AnimationSpeed = 0.03F;
-            this.btn_Sua_HSX.BaseColor = System.Drawing.Color.White;
-            this.btn_Sua_HSX.BorderColor = System.Drawing.Color.Black;
-            this.btn_Sua_HSX.BorderSize = 1;
-            this.btn_Sua_HSX.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Sua_HSX.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Sua_HSX.ForeColor = System.Drawing.Color.White;
-            this.btn_Sua_HSX.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sua_HSX.Image")));
-            this.btn_Sua_HSX.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Sua_HSX.Location = new System.Drawing.Point(12, 75);
-            this.btn_Sua_HSX.Name = "btn_Sua_HSX";
-            this.btn_Sua_HSX.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Sua_HSX.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Sua_HSX.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Sua_HSX.OnHoverImage = null;
-            this.btn_Sua_HSX.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Sua_HSX.Size = new System.Drawing.Size(35, 35);
-            this.btn_Sua_HSX.TabIndex = 1;
-            this.btn_Sua_HSX.Click += new System.EventHandler(this.btn_Sua_HSX_Click);
-            // 
-            // btn_Them_HSX
-            // 
-            this.btn_Them_HSX.AnimationHoverSpeed = 0.07F;
-            this.btn_Them_HSX.AnimationSpeed = 0.03F;
-            this.btn_Them_HSX.BaseColor = System.Drawing.Color.White;
-            this.btn_Them_HSX.BorderColor = System.Drawing.Color.Black;
-            this.btn_Them_HSX.BorderSize = 1;
-            this.btn_Them_HSX.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Them_HSX.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Them_HSX.ForeColor = System.Drawing.Color.White;
-            this.btn_Them_HSX.Image = ((System.Drawing.Image)(resources.GetObject("btn_Them_HSX.Image")));
-            this.btn_Them_HSX.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Them_HSX.Location = new System.Drawing.Point(12, 34);
-            this.btn_Them_HSX.Name = "btn_Them_HSX";
-            this.btn_Them_HSX.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Them_HSX.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Them_HSX.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Them_HSX.OnHoverImage = null;
-            this.btn_Them_HSX.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Them_HSX.Size = new System.Drawing.Size(35, 35);
-            this.btn_Them_HSX.TabIndex = 0;
-            this.btn_Them_HSX.Click += new System.EventHandler(this.btn_Them_HSX_Click);
-            // 
-            // dgv_HangSX
-            // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.dgv_HangSX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.dgv_HangSX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_HangSX.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_HangSX.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_HangSX.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_HangSX.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_HangSX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.dgv_HangSX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_HangSX.DefaultCellStyle = dataGridViewCellStyle18;
-            this.dgv_HangSX.EnableHeadersVisualStyles = false;
-            this.dgv_HangSX.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_HangSX.Location = new System.Drawing.Point(73, 34);
-            this.dgv_HangSX.MultiSelect = false;
-            this.dgv_HangSX.Name = "dgv_HangSX";
-            this.dgv_HangSX.ReadOnly = true;
-            this.dgv_HangSX.RowHeadersVisible = false;
-            this.dgv_HangSX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_HangSX.Size = new System.Drawing.Size(338, 456);
-            this.dgv_HangSX.TabIndex = 14;
-            this.dgv_HangSX.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.dgv_HangSX.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_HangSX.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgv_HangSX.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgv_HangSX.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgv_HangSX.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_HangSX.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_HangSX.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_HangSX.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgv_HangSX.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_HangSX.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_HangSX.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgv_HangSX.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_HangSX.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgv_HangSX.ThemeStyle.ReadOnly = true;
-            this.dgv_HangSX.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_HangSX.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_HangSX.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_HangSX.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_HangSX.ThemeStyle.RowsStyle.Height = 22;
-            this.dgv_HangSX.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_HangSX.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_HangSX.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_HangSX_CellMouseDoubleClick);
-            // 
             // dgv_NhaCC
             // 
             this.dgv_NhaCC.AllowUserToAddRows = false;
             this.dgv_NhaCC.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dgv_NhaCC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_NhaCC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_NhaCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_NhaCC.BackgroundColor = System.Drawing.Color.White;
             this.dgv_NhaCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_NhaCC.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_NhaCC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_NhaCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.dgv_NhaCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_NhaCC.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_NhaCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_NhaCC.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_NhaCC.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_NhaCC.EnableHeadersVisualStyles = false;
             this.dgv_NhaCC.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_NhaCC.Location = new System.Drawing.Point(73, 34);
@@ -378,7 +119,7 @@ namespace QuanLy_CuaHang.SanPham
             this.dgv_NhaCC.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_NhaCC.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_NhaCC.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgv_NhaCC.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_NhaCC.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgv_NhaCC.ThemeStyle.HeaderStyle.Height = 4;
             this.dgv_NhaCC.ThemeStyle.ReadOnly = true;
             this.dgv_NhaCC.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -390,18 +131,277 @@ namespace QuanLy_CuaHang.SanPham
             this.dgv_NhaCC.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_NhaCC.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_NhaCC_CellMouseDoubleClick);
             // 
-            // UC_NhaCungCap
+            // btn_LamMoi_DM
+            // 
+            this.btn_LamMoi_DM.AnimationHoverSpeed = 0.07F;
+            this.btn_LamMoi_DM.AnimationSpeed = 0.03F;
+            this.btn_LamMoi_DM.BaseColor = System.Drawing.Color.White;
+            this.btn_LamMoi_DM.BorderColor = System.Drawing.Color.Black;
+            this.btn_LamMoi_DM.BorderSize = 1;
+            this.btn_LamMoi_DM.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_LamMoi_DM.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_LamMoi_DM.ForeColor = System.Drawing.Color.White;
+            this.btn_LamMoi_DM.Image = ((System.Drawing.Image)(resources.GetObject("btn_LamMoi_DM.Image")));
+            this.btn_LamMoi_DM.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_LamMoi_DM.Location = new System.Drawing.Point(12, 157);
+            this.btn_LamMoi_DM.Name = "btn_LamMoi_DM";
+            this.btn_LamMoi_DM.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_LamMoi_DM.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_LamMoi_DM.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_LamMoi_DM.OnHoverImage = null;
+            this.btn_LamMoi_DM.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_LamMoi_DM.Size = new System.Drawing.Size(35, 35);
+            this.btn_LamMoi_DM.TabIndex = 13;
+            this.btn_LamMoi_DM.Click += new System.EventHandler(this.btn_LamMoi_NCC_Click);
+            // 
+            // btn_Xoa_DM
+            // 
+            this.btn_Xoa_DM.AnimationHoverSpeed = 0.07F;
+            this.btn_Xoa_DM.AnimationSpeed = 0.03F;
+            this.btn_Xoa_DM.BaseColor = System.Drawing.Color.White;
+            this.btn_Xoa_DM.BorderColor = System.Drawing.Color.Black;
+            this.btn_Xoa_DM.BorderSize = 1;
+            this.btn_Xoa_DM.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Xoa_DM.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Xoa_DM.ForeColor = System.Drawing.Color.White;
+            this.btn_Xoa_DM.Image = ((System.Drawing.Image)(resources.GetObject("btn_Xoa_DM.Image")));
+            this.btn_Xoa_DM.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Xoa_DM.Location = new System.Drawing.Point(12, 116);
+            this.btn_Xoa_DM.Name = "btn_Xoa_DM";
+            this.btn_Xoa_DM.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Xoa_DM.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Xoa_DM.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Xoa_DM.OnHoverImage = null;
+            this.btn_Xoa_DM.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Xoa_DM.Size = new System.Drawing.Size(35, 35);
+            this.btn_Xoa_DM.TabIndex = 2;
+            this.btn_Xoa_DM.Click += new System.EventHandler(this.btn_Xoa_NCC_Click);
+            // 
+            // btn_Sua_DM
+            // 
+            this.btn_Sua_DM.AnimationHoverSpeed = 0.07F;
+            this.btn_Sua_DM.AnimationSpeed = 0.03F;
+            this.btn_Sua_DM.BaseColor = System.Drawing.Color.White;
+            this.btn_Sua_DM.BorderColor = System.Drawing.Color.Black;
+            this.btn_Sua_DM.BorderSize = 1;
+            this.btn_Sua_DM.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Sua_DM.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Sua_DM.ForeColor = System.Drawing.Color.White;
+            this.btn_Sua_DM.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sua_DM.Image")));
+            this.btn_Sua_DM.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Sua_DM.Location = new System.Drawing.Point(12, 75);
+            this.btn_Sua_DM.Name = "btn_Sua_DM";
+            this.btn_Sua_DM.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Sua_DM.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Sua_DM.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Sua_DM.OnHoverImage = null;
+            this.btn_Sua_DM.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Sua_DM.Size = new System.Drawing.Size(35, 35);
+            this.btn_Sua_DM.TabIndex = 1;
+            this.btn_Sua_DM.Click += new System.EventHandler(this.btn_Sua_NCC_Click);
+            // 
+            // btn_Them_DM
+            // 
+            this.btn_Them_DM.AnimationHoverSpeed = 0.07F;
+            this.btn_Them_DM.AnimationSpeed = 0.03F;
+            this.btn_Them_DM.BaseColor = System.Drawing.Color.White;
+            this.btn_Them_DM.BorderColor = System.Drawing.Color.Black;
+            this.btn_Them_DM.BorderSize = 1;
+            this.btn_Them_DM.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Them_DM.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Them_DM.ForeColor = System.Drawing.Color.White;
+            this.btn_Them_DM.Image = ((System.Drawing.Image)(resources.GetObject("btn_Them_DM.Image")));
+            this.btn_Them_DM.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Them_DM.Location = new System.Drawing.Point(12, 34);
+            this.btn_Them_DM.Name = "btn_Them_DM";
+            this.btn_Them_DM.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Them_DM.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Them_DM.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Them_DM.OnHoverImage = null;
+            this.btn_Them_DM.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Them_DM.Size = new System.Drawing.Size(35, 35);
+            this.btn_Them_DM.TabIndex = 0;
+            this.btn_Them_DM.Click += new System.EventHandler(this.btn_Them_NCC_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgv_HangSX);
+            this.groupBox2.Controls.Add(this.btn_LamMoi_LSP);
+            this.groupBox2.Controls.Add(this.btn_Xoa_LSP);
+            this.groupBox2.Controls.Add(this.btn_Sua_LSP);
+            this.groupBox2.Controls.Add(this.btn_Them_LSP);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(445, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(434, 515);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Hãng sản xuất";
+            // 
+            // dgv_HangSX
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_HangSX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_HangSX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_HangSX.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_HangSX.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_HangSX.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_HangSX.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HangSX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_HangSX.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_HangSX.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_HangSX.EnableHeadersVisualStyles = false;
+            this.dgv_HangSX.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_HangSX.Location = new System.Drawing.Point(73, 34);
+            this.dgv_HangSX.MultiSelect = false;
+            this.dgv_HangSX.Name = "dgv_HangSX";
+            this.dgv_HangSX.ReadOnly = true;
+            this.dgv_HangSX.RowHeadersVisible = false;
+            this.dgv_HangSX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_HangSX.Size = new System.Drawing.Size(338, 456);
+            this.dgv_HangSX.TabIndex = 14;
+            this.dgv_HangSX.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dgv_HangSX.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_HangSX.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgv_HangSX.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv_HangSX.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgv_HangSX.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgv_HangSX.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_HangSX.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_HangSX.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgv_HangSX.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_HangSX.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_HangSX.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_HangSX.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_HangSX.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgv_HangSX.ThemeStyle.ReadOnly = true;
+            this.dgv_HangSX.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_HangSX.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_HangSX.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_HangSX.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_HangSX.ThemeStyle.RowsStyle.Height = 22;
+            this.dgv_HangSX.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_HangSX.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_HangSX.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_HangSX_CellMouseDoubleClick);
+            // 
+            // btn_LamMoi_LSP
+            // 
+            this.btn_LamMoi_LSP.AnimationHoverSpeed = 0.07F;
+            this.btn_LamMoi_LSP.AnimationSpeed = 0.03F;
+            this.btn_LamMoi_LSP.BaseColor = System.Drawing.Color.White;
+            this.btn_LamMoi_LSP.BorderColor = System.Drawing.Color.Black;
+            this.btn_LamMoi_LSP.BorderSize = 1;
+            this.btn_LamMoi_LSP.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_LamMoi_LSP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_LamMoi_LSP.ForeColor = System.Drawing.Color.White;
+            this.btn_LamMoi_LSP.Image = ((System.Drawing.Image)(resources.GetObject("btn_LamMoi_LSP.Image")));
+            this.btn_LamMoi_LSP.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_LamMoi_LSP.Location = new System.Drawing.Point(12, 157);
+            this.btn_LamMoi_LSP.Name = "btn_LamMoi_LSP";
+            this.btn_LamMoi_LSP.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_LamMoi_LSP.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_LamMoi_LSP.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_LamMoi_LSP.OnHoverImage = null;
+            this.btn_LamMoi_LSP.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_LamMoi_LSP.Size = new System.Drawing.Size(35, 35);
+            this.btn_LamMoi_LSP.TabIndex = 13;
+            this.btn_LamMoi_LSP.Click += new System.EventHandler(this.btn_LamMoi_HSX_Click);
+            // 
+            // btn_Xoa_LSP
+            // 
+            this.btn_Xoa_LSP.AnimationHoverSpeed = 0.07F;
+            this.btn_Xoa_LSP.AnimationSpeed = 0.03F;
+            this.btn_Xoa_LSP.BaseColor = System.Drawing.Color.White;
+            this.btn_Xoa_LSP.BorderColor = System.Drawing.Color.Black;
+            this.btn_Xoa_LSP.BorderSize = 1;
+            this.btn_Xoa_LSP.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Xoa_LSP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Xoa_LSP.ForeColor = System.Drawing.Color.White;
+            this.btn_Xoa_LSP.Image = ((System.Drawing.Image)(resources.GetObject("btn_Xoa_LSP.Image")));
+            this.btn_Xoa_LSP.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Xoa_LSP.Location = new System.Drawing.Point(12, 116);
+            this.btn_Xoa_LSP.Name = "btn_Xoa_LSP";
+            this.btn_Xoa_LSP.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Xoa_LSP.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Xoa_LSP.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Xoa_LSP.OnHoverImage = null;
+            this.btn_Xoa_LSP.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Xoa_LSP.Size = new System.Drawing.Size(35, 35);
+            this.btn_Xoa_LSP.TabIndex = 2;
+            this.btn_Xoa_LSP.Click += new System.EventHandler(this.btn_Xoa_HSX_Click);
+            // 
+            // btn_Sua_LSP
+            // 
+            this.btn_Sua_LSP.AnimationHoverSpeed = 0.07F;
+            this.btn_Sua_LSP.AnimationSpeed = 0.03F;
+            this.btn_Sua_LSP.BaseColor = System.Drawing.Color.White;
+            this.btn_Sua_LSP.BorderColor = System.Drawing.Color.Black;
+            this.btn_Sua_LSP.BorderSize = 1;
+            this.btn_Sua_LSP.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Sua_LSP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Sua_LSP.ForeColor = System.Drawing.Color.White;
+            this.btn_Sua_LSP.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sua_LSP.Image")));
+            this.btn_Sua_LSP.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Sua_LSP.Location = new System.Drawing.Point(12, 75);
+            this.btn_Sua_LSP.Name = "btn_Sua_LSP";
+            this.btn_Sua_LSP.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Sua_LSP.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Sua_LSP.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Sua_LSP.OnHoverImage = null;
+            this.btn_Sua_LSP.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Sua_LSP.Size = new System.Drawing.Size(35, 35);
+            this.btn_Sua_LSP.TabIndex = 1;
+            this.btn_Sua_LSP.Click += new System.EventHandler(this.btn_Sua_HSX_Click);
+            // 
+            // btn_Them_LSP
+            // 
+            this.btn_Them_LSP.AnimationHoverSpeed = 0.07F;
+            this.btn_Them_LSP.AnimationSpeed = 0.03F;
+            this.btn_Them_LSP.BaseColor = System.Drawing.Color.White;
+            this.btn_Them_LSP.BorderColor = System.Drawing.Color.Black;
+            this.btn_Them_LSP.BorderSize = 1;
+            this.btn_Them_LSP.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Them_LSP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Them_LSP.ForeColor = System.Drawing.Color.White;
+            this.btn_Them_LSP.Image = ((System.Drawing.Image)(resources.GetObject("btn_Them_LSP.Image")));
+            this.btn_Them_LSP.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Them_LSP.Location = new System.Drawing.Point(12, 34);
+            this.btn_Them_LSP.Name = "btn_Them_LSP";
+            this.btn_Them_LSP.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Them_LSP.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Them_LSP.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Them_LSP.OnHoverImage = null;
+            this.btn_Them_LSP.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Them_LSP.Size = new System.Drawing.Size(35, 35);
+            this.btn_Them_LSP.TabIndex = 0;
+            this.btn_Them_LSP.Click += new System.EventHandler(this.btn_Them_HSX_Click);
+            // 
+            // UC_NhaCC_HangSX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "UC_NhaCungCap";
+            this.Name = "UC_NhaCC_HangSX";
             this.Size = new System.Drawing.Size(886, 523);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_NhaCC)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HangSX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_NhaCC)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -409,15 +409,15 @@ namespace QuanLy_CuaHang.SanPham
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private Guna.UI.WinForms.GunaCircleButton btn_LamMoi_NCC;
-        private Guna.UI.WinForms.GunaCircleButton btn_Xoa_NCC;
-        private Guna.UI.WinForms.GunaCircleButton btn_Sua_NCC;
-        private Guna.UI.WinForms.GunaCircleButton btn_Them_NCC;
+        private Guna.UI.WinForms.GunaCircleButton btn_LamMoi_DM;
+        private Guna.UI.WinForms.GunaCircleButton btn_Xoa_DM;
+        private Guna.UI.WinForms.GunaCircleButton btn_Sua_DM;
+        private Guna.UI.WinForms.GunaCircleButton btn_Them_DM;
         private System.Windows.Forms.GroupBox groupBox2;
-        private Guna.UI.WinForms.GunaCircleButton btn_LamMoi_HSX;
-        private Guna.UI.WinForms.GunaCircleButton btn_Xoa_HSX;
-        private Guna.UI.WinForms.GunaCircleButton btn_Sua_HSX;
-        private Guna.UI.WinForms.GunaCircleButton btn_Them_HSX;
+        private Guna.UI.WinForms.GunaCircleButton btn_LamMoi_LSP;
+        private Guna.UI.WinForms.GunaCircleButton btn_Xoa_LSP;
+        private Guna.UI.WinForms.GunaCircleButton btn_Sua_LSP;
+        private Guna.UI.WinForms.GunaCircleButton btn_Them_LSP;
         private Guna.UI.WinForms.GunaDataGridView dgv_NhaCC;
         private Guna.UI.WinForms.GunaDataGridView dgv_HangSX;
     }

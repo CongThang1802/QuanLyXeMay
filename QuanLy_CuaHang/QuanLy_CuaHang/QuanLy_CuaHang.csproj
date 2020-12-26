@@ -98,17 +98,35 @@
     <Compile Include="NguoiDung\UC_NguoiDung.Designer.cs">
       <DependentUpon>UC_NguoiDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="SanPham\Dialog\DAL_DanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SanPham\Dialog\DAL_DanhMuc.Designer.cs">
+      <DependentUpon>DAL_DanhMuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="SanPham\Dialog\DAL_HangSX.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SanPham\Dialog\DAL_HangSX.Designer.cs">
       <DependentUpon>DAL_HangSX.cs</DependentUpon>
     </Compile>
+    <Compile Include="SanPham\Dialog\DAL_LoaiSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SanPham\Dialog\DAL_LoaiSP.Designer.cs">
+      <DependentUpon>DAL_LoaiSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="SanPham\Dialog\DAL_NhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SanPham\Dialog\DAL_NhaCungCap.Designer.cs">
       <DependentUpon>DAL_NhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SanPham\UC_DanhM_LoaiSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SanPham\UC_DanhM_LoaiSP.Designer.cs">
+      <DependentUpon>UC_DanhM_LoaiSP.cs</DependentUpon>
     </Compile>
     <Compile Include="SanPham\UC_NhaCC_HangSX.cs">
       <SubType>UserControl</SubType>
@@ -155,11 +173,20 @@
     <EmbeddedResource Include="NguoiDung\UC_NguoiDung.resx">
       <DependentUpon>UC_NguoiDung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SanPham\Dialog\DAL_DanhMuc.resx">
+      <DependentUpon>DAL_DanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SanPham\Dialog\DAL_HangSX.resx">
       <DependentUpon>DAL_HangSX.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SanPham\Dialog\DAL_LoaiSP.resx">
+      <DependentUpon>DAL_LoaiSP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SanPham\Dialog\DAL_NhaCungCap.resx">
       <DependentUpon>DAL_NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SanPham\UC_DanhM_LoaiSP.resx">
+      <DependentUpon>UC_DanhM_LoaiSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SanPham\UC_NhaCC_HangSX.resx">
       <DependentUpon>UC_NhaCC_HangSX.cs</DependentUpon>

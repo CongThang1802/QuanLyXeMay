@@ -69,6 +69,7 @@
     <Compile Include="DanhMuc.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc_Data.cs" />
     <Compile Include="DichVu.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
@@ -91,6 +92,7 @@
     <Compile Include="KhachHang.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="LoaiSP_Data.cs" />
     <Compile Include="Loai_SP.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>

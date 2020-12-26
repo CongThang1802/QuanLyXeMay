@@ -35,8 +35,12 @@ namespace QuanLy_CuaHang.SanPham
                     //this.tab_SanPham.Controls.Add(uC_SanPham);
                     break;
                 case 2:
-                    this.tab_HangSX.Controls.Clear();
-                    this.tab_HangSX.Controls.Add(new UC_NhaCC_HangSX());
+                    this.tab_HangSX_NCC.Controls.Clear();
+                    this.tab_HangSX_NCC.Controls.Add(new UC_NhaCC_HangSX());
+                    break;
+                case 3:
+                    this.tab_DanhM_LoaiSP.Controls.Clear();
+                    this.tab_DanhM_LoaiSP.Controls.Add(new UC_DanhM_LoaiSP());
                     break;
             }
         }
