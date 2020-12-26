@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CuaHang_XeMayModelStoreContainer" CdmEntityContainer="CuaHang_XeMayEntities">
+    <EntitySetMapping Name="CT_PhieuNhap">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.CT_PhieuNhap">
+        <MappingFragment StoreEntitySet="CT_PhieuNhap">
+          <ScalarProperty Name="ma_PN" ColumnName="ma_PN" />
+          <ScalarProperty Name="ma_SP" ColumnName="ma_SP" />
+          <ScalarProperty Name="gianhap_SP" ColumnName="gianhap_SP" />
+          <ScalarProperty Name="soluong_SP" ColumnName="soluong_SP" />
+          <ScalarProperty Name="tongtien_SP" ColumnName="tongtien_SP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_Quyen">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.CT_Quyen">
+        <MappingFragment StoreEntitySet="CT_Quyen">
+          <ScalarProperty Name="ma_NV" ColumnName="ma_NV" />
+          <ScalarProperty Name="ma_CN" ColumnName="ma_CN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTHD_BanHang">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.CTHD_BanHang">
+        <MappingFragment StoreEntitySet="CTHD_BanHang">
+          <ScalarProperty Name="ma_HD" ColumnName="ma_HD" />
+          <ScalarProperty Name="ma_SP" ColumnName="ma_SP" />
+          <ScalarProperty Name="gia_SP" ColumnName="gia_SP" />
+          <ScalarProperty Name="soluong_SP" ColumnName="soluong_SP" />
+          <ScalarProperty Name="tongtien_SP" ColumnName="tongtien_SP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTHD_DichVu">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.CTHD_DichVu">
+        <MappingFragment StoreEntitySet="CTHD_DichVu">
+          <ScalarProperty Name="ma_HDDV" ColumnName="ma_HDDV" />
+          <ScalarProperty Name="ma_DV" ColumnName="ma_DV" />
+          <ScalarProperty Name="gia_DV" ColumnName="gia_DV" />
+          <ScalarProperty Name="soluong_DV" ColumnName="soluong_DV" />
+          <ScalarProperty Name="tongtien_DV" ColumnName="tongtien_DV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChucNang">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.ChucNang">
+        <MappingFragment StoreEntitySet="ChucNang">
+          <ScalarProperty Name="ma_CN" ColumnName="ma_CN" />
+          <ScalarProperty Name="ten_CN" ColumnName="ten_CN" />
+          <ScalarProperty Name="ma_UI" ColumnName="ma_UI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DanhMuc">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.DanhMuc">
+        <MappingFragment StoreEntitySet="DanhMuc">
+          <ScalarProperty Name="ma_DM" ColumnName="ma_DM" />
+          <ScalarProperty Name="ten_DM" ColumnName="ten_DM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DichVu">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.DichVu">
+        <MappingFragment StoreEntitySet="DichVu">
+          <ScalarProperty Name="ma_DV" ColumnName="ma_DV" />
+          <ScalarProperty Name="ten_DV" ColumnName="ten_DV" />
+          <ScalarProperty Name="mota_DV" ColumnName="mota_DV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gia_DV">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.Gia_DV">
+        <MappingFragment StoreEntitySet="Gia_DV">
+          <ScalarProperty Name="ma_GiaDV" ColumnName="ma_GiaDV" />
+          <ScalarProperty Name="ma_DV" ColumnName="ma_DV" />
+          <ScalarProperty Name="gia_DV1" ColumnName="gia_DV" />
+          <ScalarProperty Name="ngay_DBDV" ColumnName="ngay_DBDV" />
+          <ScalarProperty Name="ngay_KTDV" ColumnName="ngay_KTDV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gia_SP">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.Gia_SP">
+        <MappingFragment StoreEntitySet="Gia_SP">
+          <ScalarProperty Name="ma_GiaSP" ColumnName="ma_GiaSP" />
+          <ScalarProperty Name="ma_SP" ColumnName="ma_SP" />
+          <ScalarProperty Name="gia_SP1" ColumnName="gia_SP" />
+          <ScalarProperty Name="ngay_BDSP" ColumnName="ngay_BDSP" />
+          <ScalarProperty Name="ngay_KTSP" ColumnName="ngay_KTSP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hang_SX">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.Hang_SX">
+        <MappingFragment StoreEntitySet="Hang_SX">
+          <ScalarProperty Name="ma_Hang" ColumnName="ma_Hang" />
+          <ScalarProperty Name="ten_Hang" ColumnName="ten_Hang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HD_BanHang">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.HD_BanHang">
+        <MappingFragment StoreEntitySet="HD_BanHang">
+          <ScalarProperty Name="ma_HD" ColumnName="ma_HD" />
+          <ScalarProperty Name="ma_KH" ColumnName="ma_KH" />
+          <ScalarProperty Name="ma_NV" ColumnName="ma_NV" />
+          <ScalarProperty Name="ngaylap_HD" ColumnName="ngaylap_HD" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HD_DichVu">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.HD_DichVu">
+        <MappingFragment StoreEntitySet="HD_DichVu">
+          <ScalarProperty Name="ma_HDDV" ColumnName="ma_HDDV" />
+          <ScalarProperty Name="ma_KH" ColumnName="ma_KH" />
+          <ScalarProperty Name="ma_NV" ColumnName="ma_NV" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachHang">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.KhachHang">
+        <MappingFragment StoreEntitySet="KhachHang">
+          <ScalarProperty Name="ma_KH" ColumnName="ma_KH" />
+          <ScalarProperty Name="ten_HK" ColumnName="ten_HK" />
+          <ScalarProperty Name="mail_KH" ColumnName="mail_KH" />
+          <ScalarProperty Name="sdt_KH" ColumnName="sdt_KH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loai_SP">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.Loai_SP">
+        <MappingFragment StoreEntitySet="Loai_SP">
+          <ScalarProperty Name="ma_Loai" ColumnName="ma_Loai" />
+          <ScalarProperty Name="ten_Loai" ColumnName="ten_Loai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nha_CungCap">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.Nha_CungCap">
+        <MappingFragment StoreEntitySet="Nha_CungCap">
+          <ScalarProperty Name="ma_NCC" ColumnName="ma_NCC" />
+          <ScalarProperty Name="ten_NCC" ColumnName="ten_NCC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhanVien">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.NhanVien">
+        <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="ma_NV" ColumnName="ma_NV" />
+          <ScalarProperty Name="ten_NV" ColumnName="ten_NV" />
+          <ScalarProperty Name="mail_NV" ColumnName="mail_NV" />
+          <ScalarProperty Name="sdt_NV" ColumnName="sdt_NV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuNhap">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.PhieuNhap">
+        <MappingFragment StoreEntitySet="PhieuNhap">
+          <ScalarProperty Name="ma_PN" ColumnName="ma_PN" />
+          <ScalarProperty Name="ma_NCC" ColumnName="ma_NCC" />
+          <ScalarProperty Name="ma_NV" ColumnName="ma_NV" />
+          <ScalarProperty Name="ngaylap_PN" ColumnName="ngaylap_PN" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SanPham">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.SanPham">
+        <MappingFragment StoreEntitySet="SanPham">
+          <ScalarProperty Name="ma_SP" ColumnName="ma_SP" />
+          <ScalarProperty Name="ma_DM" ColumnName="ma_DM" />
+          <ScalarProperty Name="ma_Loai" ColumnName="ma_Loai" />
+          <ScalarProperty Name="ma_Hang" ColumnName="ma_Hang" />
+          <ScalarProperty Name="mau_SP" ColumnName="mau_SP" />
+          <ScalarProperty Name="soluong_SP" ColumnName="soluong_SP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CuaHang_XeMayModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CT_PhieuNhap">
+    <Key>
+      <PropertyRef Name="ma_PN" />
+      <PropertyRef Name="ma_SP" />
+    </Key>
+    <Property Name="ma_PN" Type="int" Nullable="false" />
+    <Property Name="ma_SP" Type="int" Nullable="false" />
+    <Property Name="gianhap_SP" Type="int" />
+    <Property Name="soluong_SP" Type="int" />
+    <Property Name="tongtien_SP" Type="int" />
+  </EntityType>
+  <EntityType Name="CT_Quyen">
+    <Key>
+      <PropertyRef Name="ma_NV" />
+      <PropertyRef Name="ma_CN" />
+    </Key>
+    <Property Name="ma_NV" Type="int" Nullable="false" />
+    <Property Name="ma_CN" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CTHD_BanHang">
+    <Key>
+      <PropertyRef Name="ma_HD" />
+      <PropertyRef Name="ma_SP" />
+    </Key>
+    <Property Name="ma_HD" Type="int" Nullable="false" />
+    <Property Name="ma_SP" Type="int" Nullable="false" />
+    <Property Name="gia_SP" Type="int" />
+    <Property Name="soluong_SP" Type="int" />
+    <Property Name="tongtien_SP" Type="int" />
+  </EntityType>
+  <EntityType Name="CTHD_DichVu">
+    <Key>
+      <PropertyRef Name="ma_HDDV" />
+      <PropertyRef Name="ma_DV" />
+    </Key>
+    <Property Name="ma_HDDV" Type="int" Nullable="false" />
+    <Property Name="ma_DV" Type="int" Nullable="false" />
+    <Property Name="gia_DV" Type="int" />
+    <Property Name="soluong_DV" Type="int" />
+    <Property Name="tongtien_DV" Type="int" />
+  </EntityType>
+  <EntityType Name="ChucNang">
+    <Key>
+      <PropertyRef Name="ma_CN" />
+    </Key>
+    <Property Name="ma_CN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_CN" Type="ntext" />
+    <Property Name="ma_UI" Type="ntext" />
+  </EntityType>
+  <EntityType Name="DanhMuc">
+    <Key>
+      <PropertyRef Name="ma_DM" />
+    </Key>
+    <Property Name="ma_DM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_DM" Type="ntext" />
+  </EntityType>
+  <EntityType Name="DichVu">
+    <Key>
+      <PropertyRef Name="ma_DV" />
+    </Key>
+    <Property Name="ma_DV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_DV" Type="ntext" />
+    <Property Name="mota_DV" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Gia_DV">
+    <Key>
+      <PropertyRef Name="ma_GiaDV" />
+    </Key>
+    <Property Name="ma_GiaDV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ma_DV" Type="int" />
+    <Property Name="gia_DV" Type="int" />
+    <Property Name="ngay_DBDV" Type="date" />
+    <Property Name="ngay_KTDV" Type="date" />
+  </EntityType>
+  <EntityType Name="Gia_SP">
+    <Key>
+      <PropertyRef Name="ma_GiaSP" />
+    </Key>
+    <Property Name="ma_GiaSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ma_SP" Type="int" />
+    <Property Name="gia_SP" Type="int" />
+    <Property Name="ngay_BDSP" Type="date" />
+    <Property Name="ngay_KTSP" Type="date" />
+  </EntityType>
+  <EntityType Name="Hang_SX">
+    <Key>
+      <PropertyRef Name="ma_Hang" />
+    </Key>
+    <Property Name="ma_Hang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_Hang" Type="ntext" />
+  </EntityType>
+  <EntityType Name="HD_BanHang">
+    <Key>
+      <PropertyRef Name="ma_HD" />
+    </Key>
+    <Property Name="ma_HD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ma_KH" Type="int" />
+    <Property Name="ma_NV" Type="int" />
+    <Property Name="ngaylap_HD" Type="date" />
+    <Property Name="isDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="HD_DichVu">
+    <Key>
+      <PropertyRef Name="ma_HDDV" />
+    </Key>
+    <Property Name="ma_HDDV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ma_KH" Type="int" />
+    <Property Name="ma_NV" Type="int" />
+    <Property Name="isDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="ma_KH" />
+    </Key>
+    <Property Name="ma_KH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_HK" Type="ntext" />
+    <Property Name="mail_KH" Type="ntext" />
+    <Property Name="sdt_KH" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Loai_SP">
+    <Key>
+      <PropertyRef Name="ma_Loai" />
+    </Key>
+    <Property Name="ma_Loai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_Loai" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Nha_CungCap">
+    <Key>
+      <PropertyRef Name="ma_NCC" />
+    </Key>
+    <Property Name="ma_NCC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_NCC" Type="ntext" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="ma_NV" />
+    </Key>
+    <Property Name="ma_NV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_NV" Type="ntext" />
+    <Property Name="mail_NV" Type="ntext" />
+    <Property Name="sdt_NV" Type="ntext" />
+  </EntityType>
+  <EntityType Name="PhieuNhap">
+    <Key>
+      <PropertyRef Name="ma_PN" />
+    </Key>
+    <Property Name="ma_PN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ma_NCC" Type="int" />
+    <Property Name="ma_NV" Type="int" />
+    <Property Name="ngaylap_PN" Type="date" />
+    <Property Name="isDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="ma_SP" />
+    </Key>
+    <Property Name="ma_SP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ma_DM" Type="int" />
+    <Property Name="ma_Loai" Type="int" />
+    <Property Name="ma_Hang" Type="int" />
+    <Property Name="mau_SP" Type="ntext" />
+    <Property Name="soluong_SP" Type="int" />
+  </EntityType>
+  <EntityContainer Name="CuaHang_XeMayModelStoreContainer">
+    <EntitySet Name="CT_PhieuNhap" EntityType="Self.CT_PhieuNhap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CT_Quyen" EntityType="Self.CT_Quyen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTHD_BanHang" EntityType="Self.CTHD_BanHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTHD_DichVu" EntityType="Self.CTHD_DichVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChucNang" EntityType="Self.ChucNang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DanhMuc" EntityType="Self.DanhMuc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DichVu" EntityType="Self.DichVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gia_DV" EntityType="Self.Gia_DV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gia_SP" EntityType="Self.Gia_SP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hang_SX" EntityType="Self.Hang_SX" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HD_BanHang" EntityType="Self.HD_BanHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HD_DichVu" EntityType="Self.HD_DichVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Loai_SP" EntityType="Self.Loai_SP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nha_CungCap" EntityType="Self.Nha_CungCap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhieuNhap" EntityType="Self.PhieuNhap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLy_CuaHang", "QuanLy_CuaHang\QuanLy_CuaHang.csproj", "{BF815D8C-F55F-412B-B5BE-4014E6F55564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities_Data", "Entities_Data\Entities_Data.csproj", "{D0FDF9B9-E07C-4DB4-9BE4-9970892FBC93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF815D8C-F55F-412B-B5BE-4014E6F55564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF815D8C-F55F-412B-B5BE-4014E6F55564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF815D8C-F55F-412B-B5BE-4014E6F55564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF815D8C-F55F-412B-B5BE-4014E6F55564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0FDF9B9-E07C-4DB4-9BE4-9970892FBC93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0FDF9B9-E07C-4DB4-9BE4-9970892FBC93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0FDF9B9-E07C-4DB4-9BE4-9970892FBC93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0FDF9B9-E07C-4DB4-9BE4-9970892FBC93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB68C545-75D2-49DB-94AC-AB10DAF92114}
+	EndGlobalSection
+EndGlobal
