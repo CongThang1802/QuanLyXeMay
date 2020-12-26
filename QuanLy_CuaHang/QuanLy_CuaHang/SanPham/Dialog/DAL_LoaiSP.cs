@@ -13,7 +13,7 @@ namespace QuanLy_CuaHang.SanPham.Dialog
     public partial class DAL_LoaiSP : Form
     {
         private int maLoai;
-        public DAL_LoaiSP(int maLoai)
+        public DAL_LoaiSP(int maLoai = -1)
         {
             InitializeComponent();
             this.maLoai = maLoai;

@@ -86,7 +86,7 @@ namespace Entities_Data
                 return false;
             }
         }
-        public static bool Delete_HangSX(int ma_DanhMuc)
+        public static bool Delete_DanhMuc(int ma_DanhMuc)
         {
             try
             {
@@ -101,6 +101,21 @@ namespace Entities_Data
             catch (Exception)
             {
                 return false;
+            }
+        }
+
+        public static List<DanhMuc> Search_DanhMuc(string key)
+        {
+            try
+            {
+                using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
+                {
+                    return entities.DanhMuc.Where(p => p.ten_DM.Contains(key)).ToList();
+                }
+            }
+            catch (Exception)
+            {
+                return null;
             }
         }
     }

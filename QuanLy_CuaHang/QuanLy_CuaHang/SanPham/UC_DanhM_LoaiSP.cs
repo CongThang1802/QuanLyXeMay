@@ -40,12 +40,32 @@ namespace QuanLy_CuaHang.SanPham
 
         private void btn_Them_DM_Click(object sender, EventArgs e)
         {
-
+            Dialog.DAL_DanhMuc dAL_Danh = new Dialog.DAL_DanhMuc();
+            dAL_Danh.ShowDialog();
+            try
+            {
+                dgv_DanhMuc.DataSource = Entities_Data.DanhMuc_Data.Get_DanhMucList();
+            }
+            catch (Exception) { }
         }
 
         private void btn_Sua_DM_Click(object sender, EventArgs e)
         {
+            Sua_DM();
+        }
+        private void Sua_DM()
+        {
+            if (Get_IdDM() != null)
+            {
+                Dialog.DAL_DanhMuc hangSX = new Dialog.DAL_DanhMuc(int.Parse(Get_IdDM()));
+                hangSX.ShowDialog();
 
+                try
+                {
+                    dgv_DanhMuc.DataSource = Entities_Data.DanhMuc_Data.Get_DanhMucList();
+                }
+                catch (Exception) { }
+            }
         }
 
         private void btn_Xoa_DM_Click(object sender, EventArgs e)
@@ -55,10 +75,10 @@ namespace QuanLy_CuaHang.SanPham
             {
                 if (Get_IdDM() != null)
                 {
-                    Entities_Data.DanhMuc_Data.Delete_HangSX(int.Parse(Get_IdDM()));
+                    Entities_Data.DanhMuc_Data.Delete_DanhMuc(int.Parse(Get_IdDM()));
                     try
                     {
-                        dgv_LoaiSP.DataSource = Entities_Data.DanhMuc_Data.Get_DanhMucList();
+                        dgv_DanhMuc.DataSource = Entities_Data.DanhMuc_Data.Get_DanhMucList();
                     }
                     catch (Exception) { }
                 }
@@ -87,12 +107,32 @@ namespace QuanLy_CuaHang.SanPham
 
         private void btn_Them_LSP_Click(object sender, EventArgs e)
         {
-
+            Dialog.DAL_LoaiSP dAL_LoaiSP = new Dialog.DAL_LoaiSP();
+            dAL_LoaiSP.ShowDialog();
+            try
+            {
+                dgv_LoaiSP.DataSource = Entities_Data.LoaiSP_Data.Get_LoaiSPList();
+            }
+            catch (Exception) { }
         }
 
         private void btn_Sua_LSP_Click(object sender, EventArgs e)
         {
+            Sua_LSP();
+        }
+        private void Sua_LSP()
+        {
+            if (Get_IdLSP() != null)
+            {
+                Dialog.DAL_LoaiSP hangSX = new Dialog.DAL_LoaiSP(int.Parse(Get_IdLSP()));
+                hangSX.ShowDialog();
 
+                try
+                {
+                    dgv_LoaiSP.DataSource = Entities_Data.LoaiSP_Data.Get_LoaiSPList();
+                }
+                catch (Exception) { }
+            }
         }
 
         private void btn_Xoa_LSP_Click(object sender, EventArgs e)
@@ -130,6 +170,48 @@ namespace QuanLy_CuaHang.SanPham
                 dgv_LoaiSP.DataSource = Entities_Data.LoaiSP_Data.Get_LoaiSPList();
             }
             catch (Exception) { }
+        }
+
+        private void dgv_LoaiSP_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Sua_LSP();
+        }
+
+        private void dgv_DanhMuc_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Sua_DM();
+        }
+
+        private void btn_Tim_DM_Click(object sender, EventArgs e)
+        {
+            if (txt_Tim_DM.Text.Trim() != "")
+            {
+                dgv_DanhMuc.DataSource = Entities_Data.DanhMuc_Data.Search_DanhMuc(txt_Tim_DM.Text.ToString());
+            }
+            else
+            {
+                try
+                {
+                    dgv_DanhMuc.DataSource = Entities_Data.DanhMuc_Data.Get_DanhMucList();
+                }
+                catch (Exception) { }
+            }
+        }
+
+        private void btn_Tim_LSP_Click(object sender, EventArgs e)
+        {
+            if (txt_Tim_LSP.Text.Trim() != "")
+            {
+                dgv_LoaiSP.DataSource = Entities_Data.LoaiSP_Data.Search_LoaiSP(txt_Tim_LSP.Text.ToString());
+            }
+            else
+            {
+                try
+                {
+                    dgv_LoaiSP.DataSource = Entities_Data.LoaiSP_Data.Get_LoaiSPList();
+                }
+                catch (Exception) { }
+            }
         }
     }
 }

@@ -103,5 +103,20 @@ namespace Entities_Data
                 return false;
             }
         }
+
+        public static List<Loai_SP> Search_LoaiSP(string key)
+        {
+            try
+            {
+                using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
+                {
+                    return entities.Loai_SP.Where(p => p.ten_Loai.Contains(key)).ToList();
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

@@ -177,5 +177,37 @@ namespace QuanLy_CuaHang.SanPham
                 catch (Exception) { }
             }
         }
+
+        private void btn_Tim_NCC_Click(object sender, EventArgs e)
+        {
+            if (txt_Tim_NCC.Text.Trim() != "")
+            {
+                dgv_NhaCC.DataSource = Entities_Data.NhaCungCap_Data.Search_NhaCC(txt_Tim_NCC.Text.ToString());
+            }
+            else
+            {
+                try
+                {
+                    dgv_NhaCC.DataSource = Entities_Data.NhaCungCap_Data.Get_NhaCungCapList();
+                }
+                catch (Exception) { }
+            }
+        }
+
+        private void btn_Tim_HSX_Click(object sender, EventArgs e)
+        {
+            if (txt_Tim_HSX.Text.Trim() != "")
+            {
+                dgv_HangSX.DataSource = Entities_Data.HangSanXuat_Data.Search_HangSX(txt_Tim_NCC.Text.ToString());
+            }
+            else
+            {
+                try
+                {
+                    dgv_HangSX.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
+                }
+                catch (Exception) { }
+            }
+        }
     }
 }

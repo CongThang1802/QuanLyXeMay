@@ -33,11 +33,11 @@ namespace QuanLy_CuaHang.SanPham
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_DanhM_LoaiSP));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_DanhM_LoaiSP));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv_LoaiSP = new Guna.UI.WinForms.GunaDataGridView();
             this.btn_LamMoi_LSP = new Guna.UI.WinForms.GunaCircleButton();
@@ -50,6 +50,10 @@ namespace QuanLy_CuaHang.SanPham
             this.btn_Xoa_DM = new Guna.UI.WinForms.GunaCircleButton();
             this.btn_Sua_DM = new Guna.UI.WinForms.GunaCircleButton();
             this.btn_Them_DM = new Guna.UI.WinForms.GunaCircleButton();
+            this.txt_Tim_DM = new Guna.UI.WinForms.GunaTextBox();
+            this.txt_Tim_LSP = new Guna.UI.WinForms.GunaTextBox();
+            this.btn_Tim_DM = new Guna.UI.WinForms.GunaCircleButton();
+            this.btn_Tim_LSP = new Guna.UI.WinForms.GunaCircleButton();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LoaiSP)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -58,6 +62,8 @@ namespace QuanLy_CuaHang.SanPham
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_Tim_LSP);
+            this.groupBox2.Controls.Add(this.txt_Tim_LSP);
             this.groupBox2.Controls.Add(this.dgv_LoaiSP);
             this.groupBox2.Controls.Add(this.btn_LamMoi_LSP);
             this.groupBox2.Controls.Add(this.btn_Xoa_LSP);
@@ -99,7 +105,7 @@ namespace QuanLy_CuaHang.SanPham
             this.dgv_LoaiSP.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_LoaiSP.EnableHeadersVisualStyles = false;
             this.dgv_LoaiSP.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_LoaiSP.Location = new System.Drawing.Point(73, 34);
+            this.dgv_LoaiSP.Location = new System.Drawing.Point(73, 75);
             this.dgv_LoaiSP.MultiSelect = false;
             this.dgv_LoaiSP.Name = "dgv_LoaiSP";
             this.dgv_LoaiSP.ReadOnly = true;
@@ -113,7 +119,7 @@ namespace QuanLy_CuaHang.SanPham
             this.dgv_LoaiSP.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_LoaiSP.RowHeadersVisible = false;
             this.dgv_LoaiSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_LoaiSP.Size = new System.Drawing.Size(338, 456);
+            this.dgv_LoaiSP.Size = new System.Drawing.Size(338, 415);
             this.dgv_LoaiSP.TabIndex = 14;
             this.dgv_LoaiSP.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_LoaiSP.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -137,6 +143,7 @@ namespace QuanLy_CuaHang.SanPham
             this.dgv_LoaiSP.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_LoaiSP.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_LoaiSP.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_LoaiSP.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_LoaiSP_CellMouseDoubleClick);
             // 
             // btn_LamMoi_LSP
             // 
@@ -232,6 +239,8 @@ namespace QuanLy_CuaHang.SanPham
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_Tim_DM);
+            this.groupBox1.Controls.Add(this.txt_Tim_DM);
             this.groupBox1.Controls.Add(this.dgv_DanhMuc);
             this.groupBox1.Controls.Add(this.btn_LamMoi_DM);
             this.groupBox1.Controls.Add(this.btn_Xoa_DM);
@@ -275,7 +284,7 @@ namespace QuanLy_CuaHang.SanPham
             this.dgv_DanhMuc.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_DanhMuc.EnableHeadersVisualStyles = false;
             this.dgv_DanhMuc.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_DanhMuc.Location = new System.Drawing.Point(73, 34);
+            this.dgv_DanhMuc.Location = new System.Drawing.Point(73, 75);
             this.dgv_DanhMuc.MultiSelect = false;
             this.dgv_DanhMuc.Name = "dgv_DanhMuc";
             this.dgv_DanhMuc.ReadOnly = true;
@@ -289,7 +298,7 @@ namespace QuanLy_CuaHang.SanPham
             this.dgv_DanhMuc.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_DanhMuc.RowHeadersVisible = false;
             this.dgv_DanhMuc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DanhMuc.Size = new System.Drawing.Size(338, 456);
+            this.dgv_DanhMuc.Size = new System.Drawing.Size(338, 415);
             this.dgv_DanhMuc.TabIndex = 14;
             this.dgv_DanhMuc.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_DanhMuc.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -313,6 +322,7 @@ namespace QuanLy_CuaHang.SanPham
             this.dgv_DanhMuc.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_DanhMuc.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_DanhMuc.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_DanhMuc.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_DanhMuc_CellMouseDoubleClick);
             // 
             // btn_LamMoi_DM
             // 
@@ -406,6 +416,88 @@ namespace QuanLy_CuaHang.SanPham
             this.btn_Them_DM.TabIndex = 0;
             this.btn_Them_DM.Click += new System.EventHandler(this.btn_Them_DM_Click);
             // 
+            // txt_Tim_DM
+            // 
+            this.txt_Tim_DM.BackColor = System.Drawing.Color.Transparent;
+            this.txt_Tim_DM.BaseColor = System.Drawing.Color.White;
+            this.txt_Tim_DM.BorderColor = System.Drawing.Color.Silver;
+            this.txt_Tim_DM.BorderSize = 1;
+            this.txt_Tim_DM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Tim_DM.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_Tim_DM.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_Tim_DM.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_Tim_DM.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_Tim_DM.Location = new System.Drawing.Point(214, 36);
+            this.txt_Tim_DM.Name = "txt_Tim_DM";
+            this.txt_Tim_DM.PasswordChar = '\0';
+            this.txt_Tim_DM.Radius = 12;
+            this.txt_Tim_DM.Size = new System.Drawing.Size(160, 30);
+            this.txt_Tim_DM.TabIndex = 15;
+            // 
+            // txt_Tim_LSP
+            // 
+            this.txt_Tim_LSP.BackColor = System.Drawing.Color.Transparent;
+            this.txt_Tim_LSP.BaseColor = System.Drawing.Color.White;
+            this.txt_Tim_LSP.BorderColor = System.Drawing.Color.Silver;
+            this.txt_Tim_LSP.BorderSize = 1;
+            this.txt_Tim_LSP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Tim_LSP.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_Tim_LSP.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_Tim_LSP.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_Tim_LSP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_Tim_LSP.Location = new System.Drawing.Point(214, 36);
+            this.txt_Tim_LSP.Name = "txt_Tim_LSP";
+            this.txt_Tim_LSP.PasswordChar = '\0';
+            this.txt_Tim_LSP.Radius = 12;
+            this.txt_Tim_LSP.Size = new System.Drawing.Size(160, 30);
+            this.txt_Tim_LSP.TabIndex = 16;
+            // 
+            // btn_Tim_DM
+            // 
+            this.btn_Tim_DM.AnimationHoverSpeed = 0.07F;
+            this.btn_Tim_DM.AnimationSpeed = 0.03F;
+            this.btn_Tim_DM.BaseColor = System.Drawing.Color.White;
+            this.btn_Tim_DM.BorderColor = System.Drawing.Color.Black;
+            this.btn_Tim_DM.BorderSize = 1;
+            this.btn_Tim_DM.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Tim_DM.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Tim_DM.ForeColor = System.Drawing.Color.White;
+            this.btn_Tim_DM.Image = ((System.Drawing.Image)(resources.GetObject("btn_Tim_DM.Image")));
+            this.btn_Tim_DM.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Tim_DM.Location = new System.Drawing.Point(376, 34);
+            this.btn_Tim_DM.Name = "btn_Tim_DM";
+            this.btn_Tim_DM.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Tim_DM.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Tim_DM.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Tim_DM.OnHoverImage = null;
+            this.btn_Tim_DM.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Tim_DM.Size = new System.Drawing.Size(35, 35);
+            this.btn_Tim_DM.TabIndex = 16;
+            this.btn_Tim_DM.Click += new System.EventHandler(this.btn_Tim_DM_Click);
+            // 
+            // btn_Tim_LSP
+            // 
+            this.btn_Tim_LSP.AnimationHoverSpeed = 0.07F;
+            this.btn_Tim_LSP.AnimationSpeed = 0.03F;
+            this.btn_Tim_LSP.BaseColor = System.Drawing.Color.White;
+            this.btn_Tim_LSP.BorderColor = System.Drawing.Color.Black;
+            this.btn_Tim_LSP.BorderSize = 1;
+            this.btn_Tim_LSP.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Tim_LSP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Tim_LSP.ForeColor = System.Drawing.Color.White;
+            this.btn_Tim_LSP.Image = ((System.Drawing.Image)(resources.GetObject("btn_Tim_LSP.Image")));
+            this.btn_Tim_LSP.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Tim_LSP.Location = new System.Drawing.Point(376, 34);
+            this.btn_Tim_LSP.Name = "btn_Tim_LSP";
+            this.btn_Tim_LSP.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Tim_LSP.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Tim_LSP.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Tim_LSP.OnHoverImage = null;
+            this.btn_Tim_LSP.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Tim_LSP.Size = new System.Drawing.Size(35, 35);
+            this.btn_Tim_LSP.TabIndex = 17;
+            this.btn_Tim_LSP.Click += new System.EventHandler(this.btn_Tim_LSP_Click);
+            // 
             // UC_DanhM_LoaiSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,5 +528,9 @@ namespace QuanLy_CuaHang.SanPham
         private Guna.UI.WinForms.GunaCircleButton btn_Xoa_DM;
         private Guna.UI.WinForms.GunaCircleButton btn_Sua_DM;
         private Guna.UI.WinForms.GunaCircleButton btn_Them_DM;
+        private Guna.UI.WinForms.GunaCircleButton btn_Tim_LSP;
+        private Guna.UI.WinForms.GunaTextBox txt_Tim_LSP;
+        private Guna.UI.WinForms.GunaCircleButton btn_Tim_DM;
+        private Guna.UI.WinForms.GunaTextBox txt_Tim_DM;
     }
 }

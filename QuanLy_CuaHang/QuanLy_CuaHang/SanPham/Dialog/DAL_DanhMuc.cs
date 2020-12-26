@@ -13,7 +13,7 @@ namespace QuanLy_CuaHang.SanPham.Dialog
     public partial class DAL_DanhMuc : Form
     {
         private int ma_DM;
-        public DAL_DanhMuc(int maDM)
+        public DAL_DanhMuc(int maDM = -1)
         {
             InitializeComponent();
             this.ma_DM = maDM;

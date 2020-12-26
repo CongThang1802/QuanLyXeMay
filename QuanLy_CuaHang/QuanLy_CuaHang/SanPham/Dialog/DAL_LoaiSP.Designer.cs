@@ -158,6 +158,7 @@ namespace QuanLy_CuaHang.SanPham.Dialog
             this.Controls.Add(this.txt_TenLoai);
             this.Controls.Add(this.txt_MaLoai);
             this.Name = "DAL_LoaiSP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thông tin loại sản phẩm";
             this.ResumeLayout(false);
             this.PerformLayout();

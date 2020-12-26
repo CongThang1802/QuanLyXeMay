@@ -103,5 +103,20 @@ namespace Entities_Data
                 return false;
             }
         }
+
+        public static List<Hang_SX> Search_HangSX(string key)
+        {
+            try
+            {
+                using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
+                {
+                    return entities.Hang_SX.Where(p => p.ten_Hang.Contains(key)).ToList();
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }
