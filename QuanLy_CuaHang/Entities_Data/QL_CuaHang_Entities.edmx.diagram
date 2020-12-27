@@ -20,9 +20,10 @@
         <EntityTypeShape EntityType="CuaHang_XeMayModel.KhachHang" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.Loai_SP" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.Nha_CungCap" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CuaHang_XeMayModel.NhanVien" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.PhieuNhap" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.SanPham" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuaHang_XeMayModel.sysdiagrams" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="CuaHang_XeMayModel.NhanVien" Width="1.5" PointX="9.375" PointY="9.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -18,5 +18,6 @@ namespace Entities_Data
         public string ten_NV { get; set; }
         public string mail_NV { get; set; }
         public string sdt_NV { get; set; }
+        public string mk_DangNhap { get; set; }
     }
 }

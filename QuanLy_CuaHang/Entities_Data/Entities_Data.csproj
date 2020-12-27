@@ -73,6 +73,9 @@
     <Compile Include="DichVu.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Get_TKNhanVien_Result.cs">
+      <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Gia_DV.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
@@ -126,6 +129,16 @@
     <Compile Include="SanPham.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tai_Khoan_Data.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="QL_CuaHang_Entities.edmx">

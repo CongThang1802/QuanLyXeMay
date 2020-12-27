@@ -13,6 +13,7 @@ namespace QuanLy_CuaHang
 {
     public partial class Form_MainApp : Form
     {
+        public Entities_Data.Get_TKNhanVien_Result tai_khoan_NV { get; set; }
         public Form_MainApp()
         {
             InitializeComponent();
@@ -61,6 +62,11 @@ namespace QuanLy_CuaHang
                     pnl_Select.Location = new Point(0, btn_DATA.Location.Y+183);
                     break;
             }
+        }
+
+        private void gunaImageButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

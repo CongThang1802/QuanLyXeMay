@@ -22,3 +22,15 @@ C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\Entities_Data\obj
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\Entities_Data\obj\Debug\Entities_Data.csproj.CopyComplete
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\Entities_Data\obj\Debug\Entities_Data.dll
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\Entities_Data\obj\Debug\Entities_Data.pdb
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\bin\Debug\Entities_Data.dll.config
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\bin\Debug\Entities_Data.dll
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\bin\Debug\Entities_Data.pdb
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\bin\Debug\EntityFramework.dll
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\bin\Debug\EntityFramework.xml
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\obj\Debug\Entities_Data.csprojAssemblyReference.cache
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\obj\Debug\Entities_Data.csproj.CoreCompileInputs.cache
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\obj\Debug\Entities_Data.csproj.CopyComplete
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\obj\Debug\Entities_Data.dll
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\obj\Debug\Entities_Data.pdb

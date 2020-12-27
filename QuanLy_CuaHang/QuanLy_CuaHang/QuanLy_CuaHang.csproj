@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ForgetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPass.Designer.cs">
+      <DependentUpon>ForgetPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_LoginApp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,7 @@
     <Compile Include="KhachHang\UC_KHACHHANG.Designer.cs">
       <DependentUpon>UC_KHACHHANG.cs</DependentUpon>
     </Compile>
+    <Compile Include="models\MD5_Hash.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NguoiDung\Form_ThemNguoiDung.cs">
@@ -146,6 +153,9 @@
     <Compile Include="SaoLuuDuLieu\UC_SaoLuu.Designer.cs">
       <DependentUpon>UC_SaoLuu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ForgetPass.resx">
+      <DependentUpon>ForgetPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_LoginApp.resx">
       <DependentUpon>Form_LoginApp.cs</DependentUpon>
     </EmbeddedResource>

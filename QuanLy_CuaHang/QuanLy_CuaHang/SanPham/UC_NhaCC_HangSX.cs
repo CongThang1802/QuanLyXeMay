@@ -16,7 +16,6 @@ namespace QuanLy_CuaHang.SanPham
         {
             InitializeComponent();
             Load_Data();
-
             dgv_NhaCC.ColumnHeadersHeight = 24;
             dgv_NhaCC.Columns[0].HeaderText = "Mã";
             dgv_NhaCC.Columns[1].HeaderText = "Tên";
