@@ -158,5 +158,15 @@ namespace Entities_Data
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_TKNhanVien_Result>("Get_TKNhanVien", valueParameter);
         }
+    
+        public virtual ObjectResult<CThd_Result> CThd()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<CThd_Result>("CThd");
+        }
+    
+        public virtual ObjectResult<nhavien_Result> nhavien()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<nhavien_Result>("nhavien");
+        }
     }
 }

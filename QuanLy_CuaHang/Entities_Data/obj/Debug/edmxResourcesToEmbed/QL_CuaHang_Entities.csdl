@@ -152,7 +152,7 @@
     <Property Name="ma_Loai" Type="Int32" />
     <Property Name="ma_Hang" Type="Int32" />
     <Property Name="soluong_SP" Type="Int32" />
-    <Property Name="ten_SP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mau_SP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityContainer Name="CuaHang_XeMayEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="CT_PhieuNhap" EntityType="Self.CT_PhieuNhap" />
@@ -207,6 +207,8 @@
       <Parameter Name="value" Mode="In" Type="Int32" />
     </FunctionImport>
     <EntitySet Name="NhanVien" EntityType="CuaHang_XeMayModel.NhanVien" />
+    <FunctionImport Name="CThd" ReturnType="Collection(CuaHang_XeMayModel.CThd_Result)" />
+    <FunctionImport Name="nhavien" ReturnType="Collection(CuaHang_XeMayModel.nhavien_Result)" />
   </EntityContainer>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -246,4 +248,38 @@
     <Property Name="sdt_NV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="mk_DangNhap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
+  <ComplexType Name="CThd_Result">
+    <Property Type="Int32" Name="ma_HD" Nullable="false" />
+    <Property Type="Int32" Name="ma_KH" Nullable="true" />
+    <Property Type="Int32" Name="ma_NV" Nullable="true" />
+    <Property Type="DateTime" Name="ngaylap_HD" Nullable="true" />
+    <Property Type="Boolean" Name="isDelete" Nullable="true" />
+    <Property Type="Int32" Name="ma_HD1" Nullable="false" />
+    <Property Type="Int32" Name="ma_SP" Nullable="false" />
+    <Property Type="Int32" Name="gia_SP" Nullable="true" />
+    <Property Type="Int32" Name="soluong_SP" Nullable="true" />
+    <Property Type="Int32" Name="tongtien_SP" Nullable="true" />
+    <Property Type="Int32" Name="ma_NV1" Nullable="false" />
+    <Property Type="String" Name="ten_NV" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="mail_NV" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="sdt_NV" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="mk_DangNhap" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="ma_KH1" Nullable="false" />
+    <Property Type="String" Name="ten_HK" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="mail_KH" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="sdt_KH" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="ma_SP1" Nullable="false" />
+    <Property Type="Int32" Name="ma_DM" Nullable="true" />
+    <Property Type="Int32" Name="ma_Loai" Nullable="true" />
+    <Property Type="Int32" Name="ma_Hang" Nullable="true" />
+    <Property Type="String" Name="mau_SP" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="soluong_SP1" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="nhavien_Result">
+    <Property Type="Int32" Name="ma_NV" Nullable="false" />
+    <Property Type="String" Name="ten_NV" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="mail_NV" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="sdt_NV" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="mk_DangNhap" Nullable="true" MaxLength="Max" />
+  </ComplexType>
 </Schema>

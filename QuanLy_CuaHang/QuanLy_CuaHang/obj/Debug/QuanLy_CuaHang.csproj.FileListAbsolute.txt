@@ -90,3 +90,5 @@ C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\Qua
 C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.csproj.CopyComplete
 C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.exe
 C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.pdb
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.GmailXN.resources
+C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.HoaDon.HD_BanHang.resources

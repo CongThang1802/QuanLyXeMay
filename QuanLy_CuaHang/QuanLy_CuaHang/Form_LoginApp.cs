@@ -57,9 +57,9 @@ namespace QuanLy_CuaHang
 
         private void lblForget_Click(object sender, EventArgs e)
         {
-            ForgetPass form_ForgetPass = new ForgetPass();
+            GmailXN gmailXN = new GmailXN();
             this.Visible = false;
-            form_ForgetPass.ShowDialog();
+            gmailXN.ShowDialog();
             this.Visible = true;
         }
     }

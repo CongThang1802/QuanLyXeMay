@@ -161,7 +161,7 @@
     <Property Name="ma_DM" Type="int" />
     <Property Name="ma_Loai" Type="int" />
     <Property Name="ma_Hang" Type="int" />
-    <Property Name="ten_SP" Type="ntext" />
+    <Property Name="mau_SP" Type="ntext" />
     <Property Name="soluong_SP" Type="int" />
   </EntityType>
   <EntityType Name="sysdiagrams">
@@ -174,10 +174,12 @@
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
+  <Function Name="CThd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="Get_TKNhanVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="value" Type="int" Mode="In" />
   </Function>
+  <Function Name="nhavien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
     <Parameter Name="owner_id" Type="int" Mode="In" />

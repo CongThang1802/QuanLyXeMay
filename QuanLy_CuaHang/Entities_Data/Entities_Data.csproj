@@ -60,6 +60,9 @@
     <Compile Include="CTHD_DichVu.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="CThd_Result.cs">
+      <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="CT_PhieuNhap.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
@@ -86,6 +89,7 @@
     <Compile Include="Hang_SX.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="HD_Ban.cs" />
     <Compile Include="HD_BanHang.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
@@ -102,6 +106,9 @@
     <Compile Include="NguoiDung_Data.cs" />
     <Compile Include="NhaCungCap_Data.cs" />
     <Compile Include="NhanVien.cs">
+      <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="nhavien_Result.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Nha_CungCap.cs">

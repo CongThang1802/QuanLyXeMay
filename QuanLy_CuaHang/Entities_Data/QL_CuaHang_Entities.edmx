@@ -166,7 +166,7 @@
           <Property Name="ma_DM" Type="int" />
           <Property Name="ma_Loai" Type="int" />
           <Property Name="ma_Hang" Type="int" />
-          <Property Name="ten_SP" Type="ntext" />
+          <Property Name="mau_SP" Type="ntext" />
           <Property Name="soluong_SP" Type="int" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -179,10 +179,12 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <Function Name="CThd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="Get_TKNhanVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="value" Type="int" Mode="In" />
         </Function>
+        <Function Name="nhavien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -390,7 +392,7 @@
           <Property Name="ma_Loai" Type="Int32" />
           <Property Name="ma_Hang" Type="Int32" />
           <Property Name="soluong_SP" Type="Int32" />
-          <Property Name="ten_SP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mau_SP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="CuaHang_XeMayEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CT_PhieuNhap" EntityType="Self.CT_PhieuNhap" />
@@ -412,31 +414,31 @@
           <EntitySet Name="SanPham" EntityType="Self.SanPham" />
           <EntitySet Name="sysdiagrams" EntityType="CuaHang_XeMayModel.sysdiagrams" />
           <FunctionImport Name="sp_alterdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
+          <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="version" Mode="In" Type="Int32" />
             <Parameter Name="definition" Mode="In" Type="Binary" />
           </FunctionImport>
           <FunctionImport Name="sp_creatediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
+          <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="version" Mode="In" Type="Int32" />
             <Parameter Name="definition" Mode="In" Type="Binary" />
           </FunctionImport>
           <FunctionImport Name="sp_dropdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
+          <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(CuaHang_XeMayModel.sp_helpdiagramdefinition_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
+          <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(CuaHang_XeMayModel.sp_helpdiagrams_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
+          <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_renamediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
+          <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
@@ -445,6 +447,8 @@
           <Parameter Name="value" Mode="In" Type="Int32" />
           </FunctionImport>
           <EntitySet Name="NhanVien" EntityType="CuaHang_XeMayModel.NhanVien" />
+          <FunctionImport Name="CThd" ReturnType="Collection(CuaHang_XeMayModel.CThd_Result)" />
+          <FunctionImport Name="nhavien" ReturnType="Collection(CuaHang_XeMayModel.nhavien_Result)" />
         </EntityContainer>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -484,6 +488,40 @@
           <Property Name="sdt_NV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="mk_DangNhap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
+        <ComplexType Name="CThd_Result">
+          <Property Type="Int32" Name="ma_HD" Nullable="false" />
+          <Property Type="Int32" Name="ma_KH" Nullable="true" />
+          <Property Type="Int32" Name="ma_NV" Nullable="true" />
+          <Property Type="DateTime" Name="ngaylap_HD" Nullable="true" />
+          <Property Type="Boolean" Name="isDelete" Nullable="true" />
+          <Property Type="Int32" Name="ma_HD1" Nullable="false" />
+          <Property Type="Int32" Name="ma_SP" Nullable="false" />
+          <Property Type="Int32" Name="gia_SP" Nullable="true" />
+          <Property Type="Int32" Name="soluong_SP" Nullable="true" />
+          <Property Type="Int32" Name="tongtien_SP" Nullable="true" />
+          <Property Type="Int32" Name="ma_NV1" Nullable="false" />
+          <Property Type="String" Name="ten_NV" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="mail_NV" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="sdt_NV" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="mk_DangNhap" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="ma_KH1" Nullable="false" />
+          <Property Type="String" Name="ten_HK" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="mail_KH" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="sdt_KH" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="ma_SP1" Nullable="false" />
+          <Property Type="Int32" Name="ma_DM" Nullable="true" />
+          <Property Type="Int32" Name="ma_Loai" Nullable="true" />
+          <Property Type="Int32" Name="ma_Hang" Nullable="true" />
+          <Property Type="String" Name="mau_SP" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="soluong_SP1" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="nhavien_Result">
+          <Property Type="Int32" Name="ma_NV" Nullable="false" />
+          <Property Type="String" Name="ten_NV" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="mail_NV" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="sdt_NV" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="mk_DangNhap" Nullable="true" MaxLength="Max" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -648,7 +686,7 @@
           <EntitySetMapping Name="SanPham">
             <EntityTypeMapping TypeName="CuaHang_XeMayModel.SanPham">
               <MappingFragment StoreEntitySet="SanPham">
-                <ScalarProperty Name="ten_SP" ColumnName="ten_SP" />
+                <ScalarProperty Name="mau_SP" ColumnName="mau_SP" />
                 <ScalarProperty Name="ma_SP" ColumnName="ma_SP" />
                 <ScalarProperty Name="ma_DM" ColumnName="ma_DM" />
                 <ScalarProperty Name="ma_Loai" ColumnName="ma_Loai" />
@@ -714,6 +752,48 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="CThd" FunctionName="CuaHang_XeMayModel.Store.CThd">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CuaHang_XeMayModel.CThd_Result">
+                <ScalarProperty Name="ma_HD" ColumnName="ma_HD" />
+                <ScalarProperty Name="ma_KH" ColumnName="ma_KH" />
+                <ScalarProperty Name="ma_NV" ColumnName="ma_NV" />
+                <ScalarProperty Name="ngaylap_HD" ColumnName="ngaylap_HD" />
+                <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+                <ScalarProperty Name="ma_HD1" ColumnName="ma_HD1" />
+                <ScalarProperty Name="ma_SP" ColumnName="ma_SP" />
+                <ScalarProperty Name="gia_SP" ColumnName="gia_SP" />
+                <ScalarProperty Name="soluong_SP" ColumnName="soluong_SP" />
+                <ScalarProperty Name="tongtien_SP" ColumnName="tongtien_SP" />
+                <ScalarProperty Name="ma_NV1" ColumnName="ma_NV1" />
+                <ScalarProperty Name="ten_NV" ColumnName="ten_NV" />
+                <ScalarProperty Name="mail_NV" ColumnName="mail_NV" />
+                <ScalarProperty Name="sdt_NV" ColumnName="sdt_NV" />
+                <ScalarProperty Name="mk_DangNhap" ColumnName="mk_DangNhap" />
+                <ScalarProperty Name="ma_KH1" ColumnName="ma_KH1" />
+                <ScalarProperty Name="ten_HK" ColumnName="ten_HK" />
+                <ScalarProperty Name="mail_KH" ColumnName="mail_KH" />
+                <ScalarProperty Name="sdt_KH" ColumnName="sdt_KH" />
+                <ScalarProperty Name="ma_SP1" ColumnName="ma_SP1" />
+                <ScalarProperty Name="ma_DM" ColumnName="ma_DM" />
+                <ScalarProperty Name="ma_Loai" ColumnName="ma_Loai" />
+                <ScalarProperty Name="ma_Hang" ColumnName="ma_Hang" />
+                <ScalarProperty Name="mau_SP" ColumnName="mau_SP" />
+                <ScalarProperty Name="soluong_SP1" ColumnName="soluong_SP1" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="nhavien" FunctionName="CuaHang_XeMayModel.Store.nhavien">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CuaHang_XeMayModel.nhavien_Result">
+                <ScalarProperty Name="ma_NV" ColumnName="ma_NV" />
+                <ScalarProperty Name="ten_NV" ColumnName="ten_NV" />
+                <ScalarProperty Name="mail_NV" ColumnName="mail_NV" />
+                <ScalarProperty Name="sdt_NV" ColumnName="sdt_NV" />
+                <ScalarProperty Name="mk_DangNhap" ColumnName="mk_DangNhap" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
