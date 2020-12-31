@@ -1,5 +1,5 @@
 ﻿
-namespace QuanLy_CuaHang.SanPham
+namespace QuanLy_CuaHang.SanPham1
 {
     partial class UC_SanPham
     {

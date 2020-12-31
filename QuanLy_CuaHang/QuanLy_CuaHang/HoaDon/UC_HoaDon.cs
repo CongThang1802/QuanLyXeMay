@@ -32,8 +32,20 @@ namespace QuanLy_CuaHang.HoaDon
                     this.tabPage1.Controls.Add(new HD_BanHang());
                     break;
                 case 1:
+                    Lap_HD objForm = new Lap_HD();
+                    objForm.TopLevel = false;
+                    tabPage4.Controls.Add(objForm);
+                    objForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                    objForm.Dock = DockStyle.Fill;
+                    objForm.Show();
                     break;
                 case 2:
+                    
+                    this.tabPage2.Controls.Clear();
+                    this.tabPage2.Controls.Add(new HD_DV());
+                    break;
+                case 3:
+                    
                     break;
             }
         }

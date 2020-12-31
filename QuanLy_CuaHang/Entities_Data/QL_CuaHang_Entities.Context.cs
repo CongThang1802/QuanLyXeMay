@@ -32,12 +32,10 @@ namespace Entities_Data
         public virtual DbSet<CTHD_BanHang> CTHD_BanHang { get; set; }
         public virtual DbSet<CTHD_DichVu> CTHD_DichVu { get; set; }
         public virtual DbSet<ChucNang> ChucNang { get; set; }
-        public virtual DbSet<DanhMuc> DanhMuc { get; set; }
         public virtual DbSet<DichVu> DichVu { get; set; }
         public virtual DbSet<Gia_DV> Gia_DV { get; set; }
         public virtual DbSet<Gia_SP> Gia_SP { get; set; }
         public virtual DbSet<Hang_SX> Hang_SX { get; set; }
-        public virtual DbSet<HD_BanHang> HD_BanHang { get; set; }
         public virtual DbSet<HD_DichVu> HD_DichVu { get; set; }
         public virtual DbSet<KhachHang> KhachHang { get; set; }
         public virtual DbSet<Loai_SP> Loai_SP { get; set; }
@@ -46,6 +44,8 @@ namespace Entities_Data
         public virtual DbSet<SanPham> SanPham { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<NhanVien> NhanVien { get; set; }
+        public virtual DbSet<HD_BanHang> HD_BanHang { get; set; }
+        public virtual DbSet<DanhMuc> DanhMuc { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
@@ -167,6 +167,16 @@ namespace Entities_Data
         public virtual ObjectResult<nhavien_Result> nhavien()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<nhavien_Result>("nhavien");
+        }
+    
+        public virtual ObjectResult<ChiTiet_HD_Result> ChiTiet_HD()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ChiTiet_HD_Result>("ChiTiet_HD");
+        }
+    
+        public virtual ObjectResult<hd_Result> hd()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<hd_Result>("hd");
         }
     }
 }

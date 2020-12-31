@@ -19,5 +19,7 @@ namespace Entities_Data
         public Nullable<int> gia_DV1 { get; set; }
         public Nullable<System.DateTime> ngay_DBDV { get; set; }
         public Nullable<System.DateTime> ngay_KTDV { get; set; }
+    
+        public virtual DichVu DichVu { get; set; }
     }
 }

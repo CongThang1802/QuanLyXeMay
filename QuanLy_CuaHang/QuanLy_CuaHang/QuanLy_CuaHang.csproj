@@ -45,10 +45,29 @@
     <Reference Include="Guna.UI">
       <HintPath>..\..\MotorCycleStore_Fram_4_7_2\MotorCycleStore_Fram_4_7_2\bin\Debug\Guna.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +79,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePasss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasss.Designer.cs">
+      <DependentUpon>ChangePasss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataClassesQL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesQL.dbml</DependentUpon>
+    </Compile>
     <Compile Include="ForgetPass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,11 +114,34 @@
     <Compile Include="GmailXN.Designer.cs">
       <DependentUpon>GmailXN.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon\DataSetHD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHD.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HoaDon\HD_BanHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="HoaDon\HD_BanHang.Designer.cs">
       <DependentUpon>HD_BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon\HD_DV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HoaDon\HD_DV.Designer.cs">
+      <DependentUpon>HD_DV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon\HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon\HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon\Lap_HD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon\Lap_HD.Designer.cs">
+      <DependentUpon>Lap_HD.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon\UC_HoaDon.cs">
       <SubType>UserControl</SubType>
@@ -96,11 +149,23 @@
     <Compile Include="HoaDon\UC_HoaDon.Designer.cs">
       <DependentUpon>UC_HoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon\ViewTTHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon\ViewTTHD.Designer.cs">
+      <DependentUpon>ViewTTHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhachHang\UC_KHACHHANG.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="KhachHang\UC_KHACHHANG.Designer.cs">
       <DependentUpon>UC_KHACHHANG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail.Designer.cs">
+      <DependentUpon>Mail.cs</DependentUpon>
     </Compile>
     <Compile Include="models\MD5_Hash.cs" />
     <Compile Include="Program.cs" />
@@ -116,6 +181,16 @@
     </Compile>
     <Compile Include="NguoiDung\UC_NguoiDung.Designer.cs">
       <DependentUpon>UC_NguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SanPham\Dialog\DAL_DanhMuc.cs">
       <SubType>Form</SubType>
@@ -165,6 +240,10 @@
     <Compile Include="SaoLuuDuLieu\UC_SaoLuu.Designer.cs">
       <DependentUpon>UC_SaoLuu.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="ChangePasss.resx">
+      <DependentUpon>ChangePasss.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgetPass.resx">
       <DependentUpon>ForgetPass.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,26 +259,41 @@
     <EmbeddedResource Include="HoaDon\HD_BanHang.resx">
       <DependentUpon>HD_BanHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\HD_DV.resx">
+      <DependentUpon>HD_DV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\Lap_HD.resx">
+      <DependentUpon>Lap_HD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\ReportHD.rdlc" />
     <EmbeddedResource Include="HoaDon\UC_HoaDon.resx">
       <DependentUpon>UC_HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\ViewTTHD.resx">
+      <DependentUpon>ViewTTHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\UC_KHACHHANG.resx">
       <DependentUpon>UC_KHACHHANG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="Mail.resx">
+      <DependentUpon>Mail.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="NguoiDung\Form_ThemNguoiDung.resx">
       <DependentUpon>Form_ThemNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NguoiDung\UC_NguoiDung.resx">
       <DependentUpon>UC_NguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SanPham\Dialog\DAL_DanhMuc.resx">
       <DependentUpon>DAL_DanhMuc.cs</DependentUpon>
@@ -225,6 +319,25 @@
     <EmbeddedResource Include="SaoLuuDuLieu\UC_SaoLuu.resx">
       <DependentUpon>UC_SaoLuu.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataClassesQL.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesQL.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataClassesQL.dbml.layout">
+      <DependentUpon>DataClassesQL.dbml</DependentUpon>
+    </None>
+    <None Include="HoaDon\DataSetHD.xsc">
+      <DependentUpon>DataSetHD.xsd</DependentUpon>
+    </None>
+    <None Include="HoaDon\DataSetHD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="HoaDon\DataSetHD.xss">
+      <DependentUpon>DataSetHD.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -289,9 +402,30 @@
     <Content Include="Icons\update_tag_60px.png" />
     <Content Include="Images\honda-esp-banner.jpg" />
     <Content Include="Images\logo.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\view_more_50px.png" />
+    <None Include="Resources\Image1.png" />
+    <None Include="Resources\view_icon.bmp" />
+    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="HoaDon\Dialog\" />
     <Folder Include="ThongKe\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entities_Data\Entities_Data.csproj">

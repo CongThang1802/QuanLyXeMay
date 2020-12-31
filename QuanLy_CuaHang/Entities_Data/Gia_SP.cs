@@ -19,5 +19,7 @@ namespace Entities_Data
         public Nullable<int> gia_SP1 { get; set; }
         public Nullable<System.DateTime> ngay_BDSP { get; set; }
         public Nullable<System.DateTime> ngay_KTSP { get; set; }
+    
+        public virtual SanPham SanPham { get; set; }
     }
 }

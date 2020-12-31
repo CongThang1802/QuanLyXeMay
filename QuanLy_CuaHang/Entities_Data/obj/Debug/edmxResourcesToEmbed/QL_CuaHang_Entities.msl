@@ -51,14 +51,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DanhMuc">
-      <EntityTypeMapping TypeName="CuaHang_XeMayModel.DanhMuc">
-        <MappingFragment StoreEntitySet="DanhMuc">
-          <ScalarProperty Name="ma_DM" ColumnName="ma_DM" />
-          <ScalarProperty Name="ten_DM" ColumnName="ten_DM" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="DichVu">
       <EntityTypeMapping TypeName="CuaHang_XeMayModel.DichVu">
         <MappingFragment StoreEntitySet="DichVu">
@@ -95,17 +87,6 @@
         <MappingFragment StoreEntitySet="Hang_SX">
           <ScalarProperty Name="ma_Hang" ColumnName="ma_Hang" />
           <ScalarProperty Name="ten_Hang" ColumnName="ten_Hang" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="HD_BanHang">
-      <EntityTypeMapping TypeName="CuaHang_XeMayModel.HD_BanHang">
-        <MappingFragment StoreEntitySet="HD_BanHang">
-          <ScalarProperty Name="ma_HD" ColumnName="ma_HD" />
-          <ScalarProperty Name="ma_KH" ColumnName="ma_KH" />
-          <ScalarProperty Name="ma_NV" ColumnName="ma_NV" />
-          <ScalarProperty Name="ngaylap_HD" ColumnName="ngaylap_HD" />
-          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -264,6 +245,59 @@
           <ScalarProperty Name="mail_NV" ColumnName="mail_NV" />
           <ScalarProperty Name="sdt_NV" ColumnName="sdt_NV" />
           <ScalarProperty Name="mk_DangNhap" ColumnName="mk_DangNhap" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ChiTiet_HD" FunctionName="CuaHang_XeMayModel.Store.ChiTiet_HD">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CuaHang_XeMayModel.ChiTiet_HD_Result">
+          <ScalarProperty Name="ma_HD" ColumnName="ma_HD" />
+          <ScalarProperty Name="ten_NV" ColumnName="ten_NV" />
+          <ScalarProperty Name="ten_HK" ColumnName="ten_HK" />
+          <ScalarProperty Name="ten_DM" ColumnName="ten_DM" />
+          <ScalarProperty Name="mau_SP" ColumnName="mau_SP" />
+          <ScalarProperty Name="gia_SP" ColumnName="gia_SP" />
+          <ScalarProperty Name="soluong_SP" ColumnName="soluong_SP" />
+          <ScalarProperty Name="tongtien_SP" ColumnName="tongtien_SP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="HD_BanHang">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.HD_BanHang">
+        <MappingFragment StoreEntitySet="HD_BanHang">
+          <ScalarProperty Name="thanhtien" ColumnName="thanhtien" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="ngaylap_HD" ColumnName="ngaylap_HD" />
+          <ScalarProperty Name="ma_NV" ColumnName="ma_NV" />
+          <ScalarProperty Name="ma_KH" ColumnName="ma_KH" />
+          <ScalarProperty Name="ma_HD" ColumnName="ma_HD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DanhMuc">
+      <EntityTypeMapping TypeName="CuaHang_XeMayModel.DanhMuc">
+        <MappingFragment StoreEntitySet="DanhMuc">
+          <ScalarProperty Name="ten_DM" ColumnName="ten_DM" />
+          <ScalarProperty Name="ma_DM" ColumnName="ma_DM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CT_Quyen1" TypeName="CuaHang_XeMayModel.CT_Quyen1" StoreEntitySet="CT_Quyen">
+      <EndProperty Name="NhanVien">
+        <ScalarProperty Name="ma_NV" ColumnName="ma_NV" />
+      </EndProperty>
+      <EndProperty Name="ChucNang">
+        <ScalarProperty Name="ma_CN" ColumnName="ma_CN" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="hd" FunctionName="CuaHang_XeMayModel.Store.hd">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CuaHang_XeMayModel.hd_Result">
+          <ScalarProperty Name="ma_HD" ColumnName="ma_HD" />
+          <ScalarProperty Name="ten_NV" ColumnName="ten_NV" />
+          <ScalarProperty Name="ten_HK" ColumnName="ten_HK" />
+          <ScalarProperty Name="ngaylap_HD" ColumnName="ngaylap_HD" />
+          <ScalarProperty Name="thanhtien" ColumnName="thanhtien" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

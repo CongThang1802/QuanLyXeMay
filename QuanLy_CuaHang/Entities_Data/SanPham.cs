@@ -14,11 +14,29 @@ namespace Entities_Data
     
     public partial class SanPham
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SanPham()
+        {
+            this.CT_PhieuNhap = new HashSet<CT_PhieuNhap>();
+            this.CTHD_BanHang = new HashSet<CTHD_BanHang>();
+            this.Gia_SP = new HashSet<Gia_SP>();
+        }
+    
         public int ma_SP { get; set; }
         public Nullable<int> ma_DM { get; set; }
         public Nullable<int> ma_Loai { get; set; }
         public Nullable<int> ma_Hang { get; set; }
         public Nullable<int> soluong_SP { get; set; }
         public string mau_SP { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CT_PhieuNhap> CT_PhieuNhap { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTHD_BanHang> CTHD_BanHang { get; set; }
+        public virtual DanhMuc DanhMuc { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Gia_SP> Gia_SP { get; set; }
+        public virtual Hang_SX Hang_SX { get; set; }
+        public virtual Loai_SP Loai_SP { get; set; }
     }
 }

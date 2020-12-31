@@ -57,9 +57,8 @@ namespace QuanLy_CuaHang
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(128)))), ((int)(((byte)(235)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(963, 26);
+            this.panel1.Size = new System.Drawing.Size(642, 17);
             this.panel1.TabIndex = 6;
             // 
             // gunaDragControl1
@@ -73,10 +72,9 @@ namespace QuanLy_CuaHang
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-220, 26);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(-147, 17);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(904, 489);
+            this.pictureBox1.Size = new System.Drawing.Size(603, 318);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -94,10 +92,9 @@ namespace QuanLy_CuaHang
             this.panel2.Controls.Add(this.txtPassLogin);
             this.panel2.Controls.Add(this.txtManvLogin);
             this.panel2.Controls.Add(this.btnLogin);
-            this.panel2.Location = new System.Drawing.Point(453, 26);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(302, 17);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(506, 489);
+            this.panel2.Size = new System.Drawing.Size(337, 318);
             this.panel2.TabIndex = 11;
             // 
             // lblLoginFail
@@ -105,9 +102,10 @@ namespace QuanLy_CuaHang
             this.lblLoginFail.AutoSize = true;
             this.lblLoginFail.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginFail.ForeColor = System.Drawing.Color.Red;
-            this.lblLoginFail.Location = new System.Drawing.Point(140, 381);
+            this.lblLoginFail.Location = new System.Drawing.Point(93, 248);
+            this.lblLoginFail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLoginFail.Name = "lblLoginFail";
-            this.lblLoginFail.Size = new System.Drawing.Size(298, 22);
+            this.lblLoginFail.Size = new System.Drawing.Size(222, 16);
             this.lblLoginFail.TabIndex = 20;
             this.lblLoginFail.Text = "Tài khoản hoặc mật khẩu không đúng";
             this.lblLoginFail.Visible = false;
@@ -117,9 +115,10 @@ namespace QuanLy_CuaHang
             this.lblForget.AutoSize = true;
             this.lblForget.Font = new System.Drawing.Font("Segoe Script", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForget.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.lblForget.Location = new System.Drawing.Point(195, 425);
+            this.lblForget.Location = new System.Drawing.Point(130, 276);
+            this.lblForget.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblForget.Name = "lblForget";
-            this.lblForget.Size = new System.Drawing.Size(181, 32);
+            this.lblForget.Size = new System.Drawing.Size(126, 22);
             this.lblForget.TabIndex = 19;
             this.lblForget.Text = "Quên mật khẩu";
             this.lblForget.Click += new System.EventHandler(this.lblForget_Click);
@@ -127,9 +126,10 @@ namespace QuanLy_CuaHang
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(49, 84);
+            this.pictureBox2.Location = new System.Drawing.Point(33, 55);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 79);
+            this.pictureBox2.Size = new System.Drawing.Size(67, 51);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
@@ -146,15 +146,14 @@ namespace QuanLy_CuaHang
             this.btnMini.ForeColor = System.Drawing.Color.White;
             this.btnMini.Image = ((System.Drawing.Image)(resources.GetObject("btnMini.Image")));
             this.btnMini.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnMini.Location = new System.Drawing.Point(406, 5);
-            this.btnMini.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMini.Location = new System.Drawing.Point(271, 3);
             this.btnMini.Name = "btnMini";
             this.btnMini.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnMini.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnMini.OnHoverForeColor = System.Drawing.Color.White;
             this.btnMini.OnHoverImage = null;
             this.btnMini.OnPressedColor = System.Drawing.Color.Black;
-            this.btnMini.Size = new System.Drawing.Size(45, 46);
+            this.btnMini.Size = new System.Drawing.Size(30, 30);
             this.btnMini.TabIndex = 17;
             this.btnMini.Click += new System.EventHandler(this.gunaTileButton2_Click);
             // 
@@ -170,35 +169,32 @@ namespace QuanLy_CuaHang
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnExit.Location = new System.Drawing.Point(456, 5);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnExit.Location = new System.Drawing.Point(304, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnExit.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnExit.OnHoverForeColor = System.Drawing.Color.White;
             this.btnExit.OnHoverImage = null;
             this.btnExit.OnPressedColor = System.Drawing.Color.Black;
-            this.btnExit.Size = new System.Drawing.Size(45, 46);
+            this.btnExit.Size = new System.Drawing.Size(30, 30);
             this.btnExit.TabIndex = 16;
             this.btnExit.Click += new System.EventHandler(this.gunaTileButton1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 258);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(30, 168);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 20);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 15;
             this.label3.Text = "Mật khẩu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 205);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(10, 133);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 14;
             this.label2.Text = "Mã nhân viên";
             // 
@@ -206,10 +202,9 @@ namespace QuanLy_CuaHang
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(206, 105);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(137, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 35);
+            this.label1.Size = new System.Drawing.Size(103, 23);
             this.label1.TabIndex = 13;
             this.label1.Text = "Đăng Nhập";
             // 
@@ -224,13 +219,13 @@ namespace QuanLy_CuaHang
             this.txtPassLogin.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtPassLogin.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtPassLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPassLogin.Location = new System.Drawing.Point(128, 246);
-            this.txtPassLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPassLogin.Location = new System.Drawing.Point(85, 160);
             this.txtPassLogin.Name = "txtPassLogin";
             this.txtPassLogin.PasswordChar = '●';
             this.txtPassLogin.Radius = 12;
-            this.txtPassLogin.Size = new System.Drawing.Size(324, 52);
+            this.txtPassLogin.Size = new System.Drawing.Size(216, 34);
             this.txtPassLogin.TabIndex = 12;
+            this.txtPassLogin.Text = "123456";
             this.txtPassLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPassLogin.UseSystemPasswordChar = true;
             // 
@@ -245,13 +240,13 @@ namespace QuanLy_CuaHang
             this.txtManvLogin.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtManvLogin.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtManvLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtManvLogin.Location = new System.Drawing.Point(128, 191);
-            this.txtManvLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtManvLogin.Location = new System.Drawing.Point(85, 124);
             this.txtManvLogin.Name = "txtManvLogin";
             this.txtManvLogin.PasswordChar = '\0';
             this.txtManvLogin.Radius = 12;
-            this.txtManvLogin.Size = new System.Drawing.Size(324, 52);
+            this.txtManvLogin.Size = new System.Drawing.Size(216, 34);
             this.txtManvLogin.TabIndex = 11;
+            this.txtManvLogin.Text = "6000";
             this.txtManvLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnLogin
@@ -268,8 +263,7 @@ namespace QuanLy_CuaHang
             this.btnLogin.Image = null;
             this.btnLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnLogin.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnLogin.Location = new System.Drawing.Point(128, 318);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogin.Location = new System.Drawing.Point(85, 207);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnLogin.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -277,7 +271,7 @@ namespace QuanLy_CuaHang
             this.btnLogin.OnHoverImage = null;
             this.btnLogin.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnLogin.Radius = 12;
-            this.btnLogin.Size = new System.Drawing.Size(324, 46);
+            this.btnLogin.Size = new System.Drawing.Size(216, 30);
             this.btnLogin.TabIndex = 10;
             this.btnLogin.Text = "Login";
             this.btnLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -285,14 +279,13 @@ namespace QuanLy_CuaHang
             // 
             // Form_LoginApp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 515);
+            this.ClientSize = new System.Drawing.Size(642, 335);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form_LoginApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

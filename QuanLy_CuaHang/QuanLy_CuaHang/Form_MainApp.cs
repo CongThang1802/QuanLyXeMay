@@ -22,7 +22,10 @@ namespace QuanLy_CuaHang
 
         private void gunaTileButton2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Form_LoginApp f1 = new Form_LoginApp();
+            this.Hide();
+            f1.Show();
+
         }
 
         private void gunaTileButton1_Click(object sender, EventArgs e)
@@ -46,7 +49,7 @@ namespace QuanLy_CuaHang
                     pnl_Select.Location = new Point(0, btn_THONGKE.Location.Y+183);
                     break;
                 case "btn_SANPHAM":
-                    pnl_NoiDung.Controls.Add(new SanPham.UC_SanPham());
+                    pnl_NoiDung.Controls.Add(new SanPham1.UC_SanPham());
                     pnl_Select.Location = new Point(0, btn_SANPHAM.Location.Y+183);
                     break;
                 case "btn_KHACHHANG":
@@ -67,6 +70,12 @@ namespace QuanLy_CuaHang
         private void gunaImageButton2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gunaTileButton4_Click(object sender, EventArgs e)
+        {
+            Mail f = new Mail();
+            f.Visible = true;
         }
     }
 }

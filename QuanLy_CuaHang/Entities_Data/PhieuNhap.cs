@@ -14,10 +14,21 @@ namespace Entities_Data
     
     public partial class PhieuNhap
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public PhieuNhap()
+        {
+            this.CT_PhieuNhap = new HashSet<CT_PhieuNhap>();
+        }
+    
         public int ma_PN { get; set; }
         public Nullable<int> ma_NCC { get; set; }
         public Nullable<int> ma_NV { get; set; }
         public Nullable<System.DateTime> ngaylap_PN { get; set; }
         public Nullable<bool> isDelete { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CT_PhieuNhap> CT_PhieuNhap { get; set; }
+        public virtual Nha_CungCap Nha_CungCap { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
     }
 }

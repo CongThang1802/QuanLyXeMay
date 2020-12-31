@@ -16,24 +16,34 @@ namespace Entities_Data
                 {
                     return entities.HD_BanHang.ToList();
                 }
-            }catch(Exception ex)
+            }catch(Exception)
             {
                 return null;
             }
         }
-        public static List<CThd_Result> get_CTListHd()
+        public static List<ChiTiet_HD_Result> get_CTListHd()
         {
             try
             {
                 using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
                 {
-                    return entities.CThd().ToList();
+                    List<ChiTiet_HD_Result> lst = entities.ChiTiet_HD().ToList();
+                    return lst;
                 }
 
-            }catch(Exception ex)
+            }catch(Exception)
             {
                 return null;
             }
         }
+
+        public static List<hd_Result> Search_HoaDonList(string value)
+        {
+            using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
+            {
+                return entities.hd().Where(p=> p.ten_HK.Contains(value)).ToList();
+            }
+        }
+
     }
 }

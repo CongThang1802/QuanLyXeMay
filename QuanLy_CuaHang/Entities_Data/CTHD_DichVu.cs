@@ -19,5 +19,8 @@ namespace Entities_Data
         public Nullable<int> gia_DV { get; set; }
         public Nullable<int> soluong_DV { get; set; }
         public Nullable<int> tongtien_DV { get; set; }
+    
+        public virtual DichVu DichVu { get; set; }
+        public virtual HD_DichVu HD_DichVu { get; set; }
     }
 }

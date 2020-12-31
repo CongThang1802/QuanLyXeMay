@@ -8,23 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLy_CuaHang.SanPham
+namespace QuanLy_CuaHang.SanPham1
 {
     public partial class UC_NhaCC_HangSX : UserControl
     {
+        DataClassesQLDataContext dt = new DataClassesQLDataContext();
         public UC_NhaCC_HangSX()
         {
             InitializeComponent();
+            
             Load_Data();
-            dgv_NhaCC.ColumnHeadersHeight = 24;
-            dgv_NhaCC.Columns[0].HeaderText = "Mã";
-            dgv_NhaCC.Columns[1].HeaderText = "Tên";
-            dgv_NhaCC.Columns[0].Width = 50;
+            dgv_HangSX.DataSource = dt.Hang_SXes;
+            dgv_NhaCC.DataSource = dt.Nha_CungCaps;
+            //dgv_NhaCC.ColumnHeadersHeight = 24;
+            //dgv_NhaCC.Columns[0].HeaderText = "Mã";
+            //dgv_NhaCC.Columns[1].HeaderText = "Tên";
+            //dgv_NhaCC.Columns[0].Width = 50;
 
-            dgv_HangSX.ColumnHeadersHeight = 24;
-            dgv_HangSX.Columns[0].HeaderText = "Mã";
-            dgv_HangSX.Columns[1].HeaderText = "Tên";
-            dgv_HangSX.Columns[0].Width = 50;
+            //dgv_HangSX.ColumnHeadersHeight = 24;
+            //dgv_HangSX.Columns[0].HeaderText = "Mã";
+            //dgv_HangSX.Columns[1].HeaderText = "Tên";
+            //dgv_HangSX.Columns[0].Width = 50;
         }
 
         private void Load_Data()
@@ -32,7 +36,7 @@ namespace QuanLy_CuaHang.SanPham
             try
             {
                 dgv_NhaCC.DataSource = Entities_Data.NhaCungCap_Data.Get_NhaCungCapList();
-                dgv_HangSX.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
+                dgv_NhaCC.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
             }
             catch (Exception) { }
         }
@@ -50,7 +54,7 @@ namespace QuanLy_CuaHang.SanPham
         {
             try
             {
-                dgv_HangSX.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
+                dgv_NhaCC.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
             }
             catch (Exception) { }
         }
@@ -72,7 +76,7 @@ namespace QuanLy_CuaHang.SanPham
             dAL_HangSX.ShowDialog();
             try
             {
-                dgv_HangSX.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
+                dgv_NhaCC.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
             }
             catch (Exception) { }
         }
@@ -99,10 +103,10 @@ namespace QuanLy_CuaHang.SanPham
 
         private string Get_IdHSX()
         {
-            if (dgv_HangSX.SelectedCells.Count > 0)
+            if (dgv_NhaCC.SelectedCells.Count > 0)
             {
-                int selectedrowindex = dgv_HangSX.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dgv_HangSX.Rows[selectedrowindex];
+                int selectedrowindex = dgv_NhaCC.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_NhaCC.Rows[selectedrowindex];
                 return Convert.ToString(selectedRow.Cells[0].Value);
             }
             return null;
@@ -141,7 +145,7 @@ namespace QuanLy_CuaHang.SanPham
 
                 try
                 {
-                    dgv_HangSX.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
+                    dgv_NhaCC.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
                 }
                 catch (Exception) { }
             }
@@ -157,7 +161,7 @@ namespace QuanLy_CuaHang.SanPham
                     Entities_Data.HangSanXuat_Data.Delete_HangSX(int.Parse(Get_IdHSX()));
                     try
                     {
-                        dgv_HangSX.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
+                        dgv_NhaCC.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
                     }
                     catch (Exception) { }
                 }
@@ -197,13 +201,13 @@ namespace QuanLy_CuaHang.SanPham
         {
             if (txt_Tim_HSX.Text.Trim() != "")
             {
-                dgv_HangSX.DataSource = Entities_Data.HangSanXuat_Data.Search_HangSX(txt_Tim_NCC.Text.ToString());
+                dgv_NhaCC.DataSource = Entities_Data.HangSanXuat_Data.Search_HangSX(txt_Tim_NCC.Text.ToString());
             }
             else
             {
                 try
                 {
-                    dgv_HangSX.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
+                    dgv_NhaCC.DataSource = Entities_Data.HangSanXuat_Data.Get_HangSanXuatList();
                 }
                 catch (Exception) { }
             }

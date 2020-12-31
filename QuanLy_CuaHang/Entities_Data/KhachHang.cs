@@ -14,9 +14,21 @@ namespace Entities_Data
     
     public partial class KhachHang
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public KhachHang()
+        {
+            this.HD_BanHang = new HashSet<HD_BanHang>();
+            this.HD_DichVu = new HashSet<HD_DichVu>();
+        }
+    
         public int ma_KH { get; set; }
         public string ten_HK { get; set; }
         public string mail_KH { get; set; }
         public string sdt_KH { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HD_BanHang> HD_BanHang { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HD_DichVu> HD_DichVu { get; set; }
     }
 }

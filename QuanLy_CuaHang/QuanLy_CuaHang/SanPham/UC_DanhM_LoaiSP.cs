@@ -8,24 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLy_CuaHang.SanPham
+namespace QuanLy_CuaHang.SanPham1
 {
     public partial class UC_DanhM_LoaiSP : UserControl
     {
+        DataClassesQLDataContext dt = new DataClassesQLDataContext();
         public UC_DanhM_LoaiSP()
         {
             InitializeComponent();
             Load_Data();
+            dgv_DanhMuc.DataSource = dt.DanhMucs;
+            dgv_LoaiSP.DataSource = dt.Loai_SPs;
+            //dgv_DanhMuc.ColumnHeadersHeight = 24;
+            //dgv_DanhMuc.Columns[0].HeaderText = "Mã";
+            //dgv_DanhMuc.Columns[1].HeaderText = "Tên";
+            //dgv_DanhMuc.Columns[0].Width = 50;
 
-            dgv_DanhMuc.ColumnHeadersHeight = 24;
-            dgv_DanhMuc.Columns[0].HeaderText = "Mã";
-            dgv_DanhMuc.Columns[1].HeaderText = "Tên";
-            dgv_DanhMuc.Columns[0].Width = 50;
-
-            dgv_LoaiSP.ColumnHeadersHeight = 24;
-            dgv_LoaiSP.Columns[0].HeaderText = "Mã";
-            dgv_LoaiSP.Columns[1].HeaderText = "Tên";
-            dgv_LoaiSP.Columns[0].Width = 50;
+            //dgv_LoaiSP.ColumnHeadersHeight = 24;
+            //dgv_LoaiSP.Columns[0].HeaderText = "Mã";
+            //dgv_LoaiSP.Columns[1].HeaderText = "Tên";
+            //dgv_LoaiSP.Columns[0].Width = 50;
         }
 
         private void Load_Data()

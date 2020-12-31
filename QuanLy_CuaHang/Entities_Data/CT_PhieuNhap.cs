@@ -19,5 +19,8 @@ namespace Entities_Data
         public Nullable<int> gianhap_SP { get; set; }
         public Nullable<int> soluong_SP { get; set; }
         public Nullable<int> tongtien_SP { get; set; }
+    
+        public virtual PhieuNhap PhieuNhap { get; set; }
+        public virtual SanPham SanPham { get; set; }
     }
 }

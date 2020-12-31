@@ -10,12 +10,10 @@
         <EntityTypeShape EntityType="CuaHang_XeMayModel.CTHD_BanHang" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.CTHD_DichVu" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.ChucNang" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CuaHang_XeMayModel.DanhMuc" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.DichVu" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.Gia_DV" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.Gia_SP" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.Hang_SX" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CuaHang_XeMayModel.HD_BanHang" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.HD_DichVu" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.KhachHang" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.Loai_SP" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
@@ -24,6 +22,26 @@
         <EntityTypeShape EntityType="CuaHang_XeMayModel.SanPham" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.sysdiagrams" Width="1.5" PointX="7.375" PointY="9.75" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.NhanVien" Width="1.5" PointX="9.375" PointY="9.75" />
+        <EntityTypeShape EntityType="CuaHang_XeMayModel.HD_BanHang" Width="1.5" PointX="11.375" PointY="3.75" />
+        <EntityTypeShape EntityType="CuaHang_XeMayModel.DanhMuc" Width="1.5" PointX="11.375" PointY="0.75" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_ctpn_pn" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_ctpn_sp" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_cthd_sp" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_cthdbh_hdbh" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_cthddv_dv" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_cthddv_hddv" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_sp_dm" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_gdv_dv" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_gsp_sp" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_sp_hang" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_hdbh_bh" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_hdbh_kh" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_hddv_kh" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_hddv_nv" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_sp_loai" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_pn_ncc" />
+        <AssociationConnector Association="CuaHang_XeMayModel.fk_pn_nv" />
+        <AssociationConnector Association="CuaHang_XeMayModel.CT_Quyen1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
