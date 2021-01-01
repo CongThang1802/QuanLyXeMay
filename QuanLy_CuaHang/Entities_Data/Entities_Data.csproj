@@ -73,6 +73,13 @@
     <Compile Include="DichVu.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Get_GiaSPList_Result.cs">
+      <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Get_SanPhamList_Result.cs">
+      <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GiaSP_Data.cs" />
     <Compile Include="Gia_DV.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
@@ -92,6 +99,7 @@
     <Compile Include="KhachHang.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang_Data.cs" />
     <Compile Include="LoaiSP_Data.cs" />
     <Compile Include="Loai_SP.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
@@ -126,6 +134,7 @@
     <Compile Include="SanPham.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="SanPham_Data.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="QL_CuaHang_Entities.edmx">

@@ -12,6 +12,8 @@ namespace Entities_Data
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class CuaHang_XeMayEntities : DbContext
     {
@@ -43,5 +45,15 @@ namespace Entities_Data
         public virtual DbSet<NhanVien> NhanVien { get; set; }
         public virtual DbSet<PhieuNhap> PhieuNhap { get; set; }
         public virtual DbSet<SanPham> SanPham { get; set; }
+    
+        public virtual ObjectResult<Get_SanPhamList_Result> Get_SanPhamList()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_SanPhamList_Result>("Get_SanPhamList");
+        }
+    
+        public virtual ObjectResult<Get_GiaSPList_Result> Get_GiaSPList()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_GiaSPList_Result>("Get_GiaSPList");
+        }
     }
 }

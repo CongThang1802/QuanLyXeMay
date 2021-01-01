@@ -141,6 +141,7 @@
     <Property Name="ten_NV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="mail_NV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="sdt_NV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mk_DangNhap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="PhieuNhap">
     <Key>
@@ -151,17 +152,6 @@
     <Property Name="ma_NV" Type="Int32" />
     <Property Name="ngaylap_PN" Type="DateTime" Precision="0" />
     <Property Name="isDelete" Type="Boolean" />
-  </EntityType>
-  <EntityType Name="SanPham">
-    <Key>
-      <PropertyRef Name="ma_SP" />
-    </Key>
-    <Property Name="ma_SP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ma_DM" Type="Int32" />
-    <Property Name="ma_Loai" Type="Int32" />
-    <Property Name="ma_Hang" Type="Int32" />
-    <Property Name="mau_SP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="soluong_SP" Type="Int32" />
   </EntityType>
   <EntityContainer Name="CuaHang_XeMayEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="CT_PhieuNhap" EntityType="Self.CT_PhieuNhap" />
@@ -181,6 +171,33 @@
     <EntitySet Name="Nha_CungCap" EntityType="Self.Nha_CungCap" />
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" />
     <EntitySet Name="PhieuNhap" EntityType="Self.PhieuNhap" />
-    <EntitySet Name="SanPham" EntityType="Self.SanPham" />
+    <EntitySet Name="SanPham" EntityType="CuaHang_XeMayModel.SanPham" />
+    <FunctionImport Name="Get_SanPhamList" ReturnType="Collection(CuaHang_XeMayModel.Get_SanPhamList_Result)" />
+    <FunctionImport Name="Get_GiaSPList" ReturnType="Collection(CuaHang_XeMayModel.Get_GiaSPList_Result)" />
   </EntityContainer>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="ma_SP" />
+    </Key>
+    <Property Name="ma_SP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ma_DM" Type="Int32" />
+    <Property Name="ma_Loai" Type="Int32" />
+    <Property Name="ma_Hang" Type="Int32" />
+    <Property Name="ten_SP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="soluong_SP" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="Get_SanPhamList_Result">
+    <Property Type="Int32" Name="ma_SP" Nullable="false" />
+    <Property Type="String" Name="ten_SP" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="ten_DM" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="ten_Loai" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="ten_Hang" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="soluong_SP" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Get_GiaSPList_Result">
+    <Property Type="Int32" Name="ma_GiaSP" Nullable="false" />
+    <Property Type="String" Name="ten_SP" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="gia_SP" Nullable="true" />
+    <Property Type="DateTime" Name="ngay_BDSP" Nullable="true" />
+  </ComplexType>
 </Schema>

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Entities_Data
 {
-    public static class DanhMuc_Data
+    public class SanPham_Data
     {
-        public static List<DanhMuc> Get_DanhMucList()
+        public static List<Get_SanPhamList_Result> Get_SanPhamList()
         {
             try
             {
                 using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
                 {
-                    return entities.DanhMuc.ToList();
+                    return entities.Get_SanPhamList().ToList();
                 }
             }
             catch (Exception)
@@ -23,28 +23,28 @@ namespace Entities_Data
             }
         }
 
-        public static int Get_MaDanhMuc()
+        public static int Get_MaSanPham()
         {
             try
             {
                 using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
                 {
-                    return entities.DanhMuc.Max(p => p.ma_DM);
+                    return entities.SanPham.Max(p => p.ma_SP);
                 }
             }
             catch (Exception)
             {
-                return 4000;
+                return 14000;
             }
         }
 
-        public static DanhMuc Get_DanhMuc(int maDM)
+        public static SanPham Get_SanPham(int maSP)
         {
             try
             {
                 using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
                 {
-                    return entities.DanhMuc.Where(p => p.ma_DM == maDM).FirstOrDefault();
+                    return entities.SanPham.Where(p => p.ma_SP == maSP).FirstOrDefault();
                 }
             }
             catch (Exception)
@@ -53,13 +53,13 @@ namespace Entities_Data
             }
         }
 
-        public static bool Add_DanhMuc(DanhMuc danhMuc)
+        public static bool Add_SanPham(SanPham sanPham)
         {
             try
             {
                 using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
                 {
-                    entities.DanhMuc.Add(danhMuc);
+                    entities.SanPham.Add(sanPham);
                     entities.SaveChanges();
                     return true;
                 }
@@ -70,31 +70,18 @@ namespace Entities_Data
             }
         }
 
-        public static bool Update_DanhMuc(DanhMuc danh_Muc)
+        public static bool Update_SanPham(SanPham sanPham)
         {
             try
             {
                 using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
                 {
-                    DanhMuc danhMuc = entities.DanhMuc.Where(p => p.ma_DM == danh_Muc.ma_DM).FirstOrDefault();
-                    danhMuc.ten_DM = danh_Muc.ten_DM;
-                    entities.SaveChanges();
-                    return true;
-                }
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-        public static bool Delete_DanhMuc(int ma_DanhMuc)
-        {
-            try
-            {
-                using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
-                {
-                    DanhMuc danhMuc = entities.DanhMuc.Where(p => p.ma_DM == ma_DanhMuc).FirstOrDefault();
-                    entities.DanhMuc.Remove(danhMuc);
+                    SanPham san_Pham = entities.SanPham.Where(p => p.ma_SP == sanPham.ma_SP).FirstOrDefault();
+                    san_Pham.ten_SP = sanPham.ten_SP;
+                    san_Pham.ma_Loai = sanPham.ma_Loai;
+                    san_Pham.ma_Hang = sanPham.ma_Hang;
+                    san_Pham.ma_DM = sanPham.ma_DM;
+                    san_Pham.soluong_SP = sanPham.soluong_SP;
                     entities.SaveChanges();
                     return true;
                 }
@@ -105,18 +92,20 @@ namespace Entities_Data
             }
         }
 
-        public static List<DanhMuc> Search_DanhMuc(string key)
+        public static bool Delete_SanPham(int maSP)
         {
             try
             {
                 using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
                 {
-                    return entities.DanhMuc.Where(p => p.ten_DM.Contains(key)).ToList();
+                    SanPham san_Pham = entities.SanPham.Where(p => p.ma_SP == maSP).FirstOrDefault();
+                    entities.SaveChanges();
+                    return true;
                 }
             }
             catch (Exception)
             {
-                return null;
+                return false;
             }
         }
     }

@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLy_CuaHang.SanPham
 {
-    partial class UC_SanPham
+    partial class UC_SanPham_Tab
     {
         /// <summary> 
         /// Required designer variable.

@@ -10,15 +10,12 @@
 namespace Entities_Data
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class SanPham
+    public partial class Get_GiaSPList_Result
     {
-        public int ma_SP { get; set; }
-        public Nullable<int> ma_DM { get; set; }
-        public Nullable<int> ma_Loai { get; set; }
-        public Nullable<int> ma_Hang { get; set; }
+        public int ma_GiaSP { get; set; }
         public string ten_SP { get; set; }
-        public Nullable<int> soluong_SP { get; set; }
+        public Nullable<int> gia_SP { get; set; }
+        public Nullable<System.DateTime> ngay_BDSP { get; set; }
     }
 }

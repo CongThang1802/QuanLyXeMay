@@ -141,6 +141,7 @@
     <Property Name="ten_NV" Type="ntext" />
     <Property Name="mail_NV" Type="ntext" />
     <Property Name="sdt_NV" Type="ntext" />
+    <Property Name="mk_DangNhap" Type="ntext" />
   </EntityType>
   <EntityType Name="PhieuNhap">
     <Key>
@@ -160,9 +161,11 @@
     <Property Name="ma_DM" Type="int" />
     <Property Name="ma_Loai" Type="int" />
     <Property Name="ma_Hang" Type="int" />
-    <Property Name="mau_SP" Type="ntext" />
+    <Property Name="ten_SP" Type="ntext" />
     <Property Name="soluong_SP" Type="int" />
   </EntityType>
+  <Function Name="Get_GiaSPList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Get_SanPhamList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="CuaHang_XeMayModelStoreContainer">
     <EntitySet Name="CT_PhieuNhap" EntityType="Self.CT_PhieuNhap" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CT_Quyen" EntityType="Self.CT_Quyen" Schema="dbo" store:Type="Tables" />

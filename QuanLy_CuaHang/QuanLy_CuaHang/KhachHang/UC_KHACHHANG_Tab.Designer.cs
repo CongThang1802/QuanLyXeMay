@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLy_CuaHang.KhachHang
 {
-    partial class UC_KHACHHANG
+    partial class UC_KHACHHANG_Tab
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,32 +29,33 @@ namespace QuanLy_CuaHang.KhachHang
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tab_QL_KhachHang = new System.Windows.Forms.TabControl();
+            this.tab_TT_KhachHang = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
+            this.tab_QL_KhachHang.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tab_QL_KhachHang
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.ItemSize = new System.Drawing.Size(58, 30);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(894, 561);
-            this.tabControl1.TabIndex = 1;
+            this.tab_QL_KhachHang.Controls.Add(this.tab_TT_KhachHang);
+            this.tab_QL_KhachHang.Controls.Add(this.tabPage2);
+            this.tab_QL_KhachHang.ItemSize = new System.Drawing.Size(58, 30);
+            this.tab_QL_KhachHang.Location = new System.Drawing.Point(0, 0);
+            this.tab_QL_KhachHang.Name = "tab_QL_KhachHang";
+            this.tab_QL_KhachHang.SelectedIndex = 0;
+            this.tab_QL_KhachHang.Size = new System.Drawing.Size(894, 561);
+            this.tab_QL_KhachHang.TabIndex = 1;
+            this.tab_QL_KhachHang.Click += new System.EventHandler(this.tab_QL_KhachHang_Click);
             // 
-            // tabPage1
+            // tab_TT_KhachHang
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(886, 523);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Thông tin khách hàng";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tab_TT_KhachHang.Location = new System.Drawing.Point(4, 34);
+            this.tab_TT_KhachHang.Name = "tab_TT_KhachHang";
+            this.tab_TT_KhachHang.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_TT_KhachHang.Size = new System.Drawing.Size(886, 523);
+            this.tab_TT_KhachHang.TabIndex = 0;
+            this.tab_TT_KhachHang.Text = "Thông tin khách hàng";
+            this.tab_TT_KhachHang.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -66,23 +67,23 @@ namespace QuanLy_CuaHang.KhachHang
             this.tabPage2.Text = "Tab";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // UC_KHACHHANG
+            // UC_KHACHHANG_Tab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.tabControl1);
-            this.Name = "UC_KHACHHANG";
+            this.Controls.Add(this.tab_QL_KhachHang);
+            this.Name = "UC_KHACHHANG_Tab";
             this.Size = new System.Drawing.Size(894, 561);
-            this.tabControl1.ResumeLayout(false);
+            this.tab_QL_KhachHang.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl tab_QL_KhachHang;
+        private System.Windows.Forms.TabPage tab_TT_KhachHang;
         private System.Windows.Forms.TabPage tabPage2;
     }
 }

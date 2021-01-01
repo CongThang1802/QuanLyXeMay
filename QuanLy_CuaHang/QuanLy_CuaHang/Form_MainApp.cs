@@ -45,11 +45,11 @@ namespace QuanLy_CuaHang
                     pnl_Select.Location = new Point(0, btn_THONGKE.Location.Y+183);
                     break;
                 case "btn_SANPHAM":
-                    pnl_NoiDung.Controls.Add(new SanPham.UC_SanPham());
+                    pnl_NoiDung.Controls.Add(new SanPham.UC_SanPham_Tab());
                     pnl_Select.Location = new Point(0, btn_SANPHAM.Location.Y+183);
                     break;
                 case "btn_KHACHHANG":
-                    pnl_NoiDung.Controls.Add(new KhachHang.UC_KHACHHANG());
+                    pnl_NoiDung.Controls.Add(new KhachHang.UC_KHACHHANG_Tab());
                     pnl_Select.Location = new Point(0, btn_KHACHHANG.Location.Y+183);
                     break;
                 case "btn_NGUOIDUNG":                    
