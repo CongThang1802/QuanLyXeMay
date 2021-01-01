@@ -157,6 +157,8 @@ namespace QuanLy_CuaHang.SanPham1.Dialog
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_TenHangSX);
             this.Controls.Add(this.txt_MaHangSX);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DAL_HangSX";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thông tin hãng";

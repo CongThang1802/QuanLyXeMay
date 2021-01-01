@@ -26,6 +26,10 @@ namespace Entities_Data
         public Nullable<int> ma_DM { get; set; }
         public Nullable<int> ma_Loai { get; set; }
         public Nullable<int> ma_Hang { get; set; }
+<<<<<<< HEAD
+        public string ten_SP { get; set; }
+=======
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
         public Nullable<int> soluong_SP { get; set; }
         public string mau_SP { get; set; }
     

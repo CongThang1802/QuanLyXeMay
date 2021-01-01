@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5473e429694f48949bd768c701e2dc6b" Name="Diagram1">
+      <Diagram DiagramId="5473e429694f48949bd768c701e2dc6b" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="CuaHang_XeMayModel.CT_PhieuNhap" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.CT_Quyen" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.CTHD_BanHang" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
@@ -19,6 +19,9 @@
         <EntityTypeShape EntityType="CuaHang_XeMayModel.Loai_SP" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.Nha_CungCap" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.PhieuNhap" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+<<<<<<< HEAD
+        <EntityTypeShape EntityType="CuaHang_XeMayModel.SanPham" Width="1.5" PointX="5.375" PointY="9.75" />
+=======
         <EntityTypeShape EntityType="CuaHang_XeMayModel.SanPham" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.sysdiagrams" Width="1.5" PointX="7.375" PointY="9.75" />
         <EntityTypeShape EntityType="CuaHang_XeMayModel.NhanVien" Width="1.5" PointX="9.375" PointY="9.75" />
@@ -42,6 +45,7 @@
         <AssociationConnector Association="CuaHang_XeMayModel.fk_pn_ncc" />
         <AssociationConnector Association="CuaHang_XeMayModel.fk_pn_nv" />
         <AssociationConnector Association="CuaHang_XeMayModel.CT_Quyen1" />
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

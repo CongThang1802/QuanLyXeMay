@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLy_CuaHang.SanPham1
 {
-    public partial class UC_SanPham : UserControl
+    public partial class UC_SanPham_Tab : UserControl
     {
-        public UC_SanPham()
+        public UC_SanPham_Tab()
         {
             InitializeComponent();
             Check_Tab();
@@ -28,11 +28,12 @@ namespace QuanLy_CuaHang.SanPham1
             switch (tab_QL_SanPham.SelectedIndex)
             {
                 case 0:
-                    //this.tab_NhapSP.Controls.Add(uC_NhapSP);
+                    this.tab_SanPham.Controls.Clear();
+                    this.tab_SanPham.Controls.Add(new UC_SanPham_TT());
                     break;
                 case 1:
-                    //views.UC_QuanLySanPham.UC_SanPham uC_SanPham = new UC_QuanLySanPham.UC_SanPham();
-                    //this.tab_SanPham.Controls.Add(uC_SanPham);
+                    this.tab_GiaSP.Controls.Clear();
+                    this.tab_GiaSP.Controls.Add(new UC_GiaSP_TT());
                     break;
                 case 2:
                     this.tab_HangSX_NCC.Controls.Clear();

@@ -133,7 +133,20 @@
     </Key>
     <Property Name="ma_NCC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ten_NCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="ma_NV" />
+    </Key>
+    <Property Name="ma_NV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ten_NV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mail_NV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sdt_NV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mk_DangNhap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+=======
     <NavigationProperty Name="PhieuNhap" Relationship="CuaHang_XeMayModel.fk_pn_ncc" FromRole="Nha_CungCap" ToRole="PhieuNhap" />
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
   </EntityType>
   <EntityType Name="PhieuNhap">
     <Key>
@@ -148,6 +161,8 @@
     <NavigationProperty Name="Nha_CungCap" Relationship="CuaHang_XeMayModel.fk_pn_ncc" FromRole="PhieuNhap" ToRole="Nha_CungCap" />
     <NavigationProperty Name="NhanVien" Relationship="CuaHang_XeMayModel.fk_pn_nv" FromRole="PhieuNhap" ToRole="NhanVien" />
   </EntityType>
+<<<<<<< HEAD
+=======
   <EntityType Name="SanPham">
     <Key>
       <PropertyRef Name="ma_SP" />
@@ -165,6 +180,7 @@
     <NavigationProperty Name="Hang_SX" Relationship="CuaHang_XeMayModel.fk_sp_hang" FromRole="SanPham" ToRole="Hang_SX" />
     <NavigationProperty Name="Loai_SP" Relationship="CuaHang_XeMayModel.fk_sp_loai" FromRole="SanPham" ToRole="Loai_SP" />
   </EntityType>
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
   <EntityContainer Name="CuaHang_XeMayEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="CT_PhieuNhap" EntityType="Self.CT_PhieuNhap" />
     <EntitySet Name="CT_Quyen" EntityType="Self.CT_Quyen" />
@@ -180,6 +196,36 @@
     <EntitySet Name="Loai_SP" EntityType="Self.Loai_SP" />
     <EntitySet Name="Nha_CungCap" EntityType="Self.Nha_CungCap" />
     <EntitySet Name="PhieuNhap" EntityType="Self.PhieuNhap" />
+<<<<<<< HEAD
+    <EntitySet Name="SanPham" EntityType="CuaHang_XeMayModel.SanPham" />
+    <FunctionImport Name="Get_SanPhamList" ReturnType="Collection(CuaHang_XeMayModel.Get_SanPhamList_Result)" />
+    <FunctionImport Name="Get_GiaSPList" ReturnType="Collection(CuaHang_XeMayModel.Get_GiaSPList_Result)" />
+  </EntityContainer>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="ma_SP" />
+    </Key>
+    <Property Name="ma_SP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ma_DM" Type="Int32" />
+    <Property Name="ma_Loai" Type="Int32" />
+    <Property Name="ma_Hang" Type="Int32" />
+    <Property Name="ten_SP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="soluong_SP" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="Get_SanPhamList_Result">
+    <Property Type="Int32" Name="ma_SP" Nullable="false" />
+    <Property Type="String" Name="ten_SP" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="ten_DM" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="ten_Loai" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="ten_Hang" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="soluong_SP" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Get_GiaSPList_Result">
+    <Property Type="Int32" Name="ma_GiaSP" Nullable="false" />
+    <Property Type="String" Name="ten_SP" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="gia_SP" Nullable="true" />
+    <Property Type="DateTime" Name="ngay_BDSP" Nullable="true" />
+=======
     <EntitySet Name="SanPham" EntityType="Self.SanPham" />
     <EntitySet Name="sysdiagrams" EntityType="CuaHang_XeMayModel.sysdiagrams" />
     <FunctionImport Name="sp_alterdiagram">
@@ -617,5 +663,6 @@
     <Property Type="String" Name="ten_HK" Nullable="true" MaxLength="Max" />
     <Property Type="DateTime" Name="ngaylap_HD" Nullable="true" />
     <Property Type="Int32" Name="thanhtien" Nullable="true" />
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
   </ComplexType>
 </Schema>

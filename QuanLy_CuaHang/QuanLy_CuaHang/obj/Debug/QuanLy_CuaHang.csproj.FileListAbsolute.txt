@@ -41,14 +41,12 @@ C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\ob
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.Form_LoginApp.resources
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.Form_MainApp.resources
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.HoaDon.UC_HoaDon.resources
-C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.KhachHang.UC_KHACHHANG.resources
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.Properties.Resources.resources
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.QL_NguoiDung.Form_ThemNguoiDung.resources
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.QL_NguoiDung.UC_QLNguoiDung.resources
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.SanPham.Dialog.DAL_HangSX.resources
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.SanPham.Dialog.DAL_NhaCungCap.resources
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.SanPham.UC_NhaCC_HangSX.resources
-C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.SanPham.UC_SanPham.resources
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.QL_SaoLuu.UC_QLSaoLuu.resources
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.csproj.GenerateResource.cache
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.csproj.CoreCompileInputs.cache
@@ -58,6 +56,15 @@ C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\ob
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.SanPham.UC_DanhM_LoaiSP.resources
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.SanPham.Dialog.DAL_DanhMuc.resources
 C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.SanPham.Dialog.DAL_LoaiSP.resources
+<<<<<<< HEAD
+C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.SanPham.UC_SanPham_Tab.resources
+C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.SanPham.UC_SanPham_TT.resources
+C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.SanPham.Dialog.DAL_SanPham.resources
+C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.SanPham.UC_GiaSP_TT.resources
+C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.SanPham.Dialog.DAL_GiaSP.resources
+C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.KhachHang.UC_KHACHHANG_Tab.resources
+C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.KhachHang.UC_TT_KhachHang.resources
+=======
 C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\bin\Debug\QuanLy_CuaHang.exe.config
 C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\bin\Debug\QuanLy_CuaHang.exe
 C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\bin\Debug\QuanLy_CuaHang.pdb
@@ -159,6 +166,7 @@ C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\Qua
 C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.Mail.resources
 C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.HoaDon.HD_DV.resources
 C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.ChangePasss.resources
+<<<<<<< HEAD
 C:\Users\Cong Thang\Desktop\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\Cong Thang\Desktop\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\Cong Thang\Desktop\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -260,3 +268,6 @@ C:\Users\Cong Thang\Desktop\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\
 C:\Users\Cong Thang\Desktop\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.csproj.CopyComplete
 C:\Users\Cong Thang\Desktop\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.exe
 C:\Users\Cong Thang\Desktop\QuanLyXeMay\QuanLy_CuaHang\QuanLy_CuaHang\obj\Debug\QuanLy_CuaHang.pdb
+=======
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
+>>>>>>> b7711939711ce6b5b0c748c32d3baff4aeef98b3

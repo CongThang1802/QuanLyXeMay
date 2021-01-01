@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Entities_Data
 {
-    public static class DanhMuc_Data
+    public static class KhachHang_Data
     {
-        public static List<DanhMuc> Get_DanhMucList()
+        public static List<KhachHang> Get_KhachHangList()
         {
             try
             {
                 using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
                 {
-                    return entities.DanhMuc.ToList();
+                    return entities.KhachHang.ToList();
                 }
             }
             catch (Exception)
@@ -23,43 +23,13 @@ namespace Entities_Data
             }
         }
 
-        public static int Get_MaDanhMuc()
+        public static bool Add_KhachHang(KhachHang khachHang)
         {
             try
             {
                 using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
                 {
-                    return entities.DanhMuc.Max(p => p.ma_DM);
-                }
-            }
-            catch (Exception)
-            {
-                return 4000;
-            }
-        }
-
-        public static DanhMuc Get_DanhMuc(int maDM)
-        {
-            try
-            {
-                using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
-                {
-                    return entities.DanhMuc.Where(p => p.ma_DM == maDM).FirstOrDefault();
-                }
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        public static bool Add_DanhMuc(DanhMuc danhMuc)
-        {
-            try
-            {
-                using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
-                {
-                    entities.DanhMuc.Add(danhMuc);
+                    entities.KhachHang.Add(khachHang);
                     entities.SaveChanges();
                     return true;
                 }
@@ -70,31 +40,16 @@ namespace Entities_Data
             }
         }
 
-        public static bool Update_DanhMuc(DanhMuc danh_Muc)
+        public static bool Update_KhachHang(KhachHang khachHang)
         {
             try
             {
                 using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
                 {
-                    DanhMuc danhMuc = entities.DanhMuc.Where(p => p.ma_DM == danh_Muc.ma_DM).FirstOrDefault();
-                    danhMuc.ten_DM = danh_Muc.ten_DM;
-                    entities.SaveChanges();
-                    return true;
-                }
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-        public static bool Delete_DanhMuc(int ma_DanhMuc)
-        {
-            try
-            {
-                using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
-                {
-                    DanhMuc danhMuc = entities.DanhMuc.Where(p => p.ma_DM == ma_DanhMuc).FirstOrDefault();
-                    entities.DanhMuc.Remove(danhMuc);
+                    KhachHang khach_Hang = entities.KhachHang.Where(p => p.ma_KH == khachHang.ma_KH).FirstOrDefault();
+                    khach_Hang.ten_HK = khachHang.ten_HK;
+                    khach_Hang.mail_KH = khachHang.mail_KH;
+                    khach_Hang.sdt_KH = khachHang.sdt_KH;
                     entities.SaveChanges();
                     return true;
                 }
@@ -105,13 +60,46 @@ namespace Entities_Data
             }
         }
 
-        public static List<DanhMuc> Search_DanhMuc(string key)
+        public static bool Delete_KhachHang(int maKH)
         {
             try
             {
                 using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
                 {
-                    return entities.DanhMuc.Where(p => p.ten_DM.Contains(key)).ToList();
+                    KhachHang khach_Hang = entities.KhachHang.Where(p => p.ma_KH == maKH).FirstOrDefault();
+                    entities.KhachHang.Remove(khach_Hang);
+                    entities.SaveChanges();
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public static int Get_MaKhachHang()
+        {
+            try
+            {
+                using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
+                {
+                    return entities.KhachHang.Max(p => p.ma_KH);
+                }
+            }
+            catch (Exception)
+            {
+                return 7000;
+            }
+        }
+
+        public static KhachHang Get_KhachHang(int maKH)
+        {
+            try
+            {
+                using (CuaHang_XeMayEntities entities = new CuaHang_XeMayEntities())
+                {
+                    return entities.KhachHang.Where(p => p.ma_KH == maKH).FirstOrDefault();
                 }
             }
             catch (Exception)
@@ -119,5 +107,6 @@ namespace Entities_Data
                 return null;
             }
         }
+
     }
 }

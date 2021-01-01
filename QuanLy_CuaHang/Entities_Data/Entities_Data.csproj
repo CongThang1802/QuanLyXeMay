@@ -100,9 +100,19 @@
     <Compile Include="DichVu.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Get_GiaSPList_Result.cs">
+      <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Get_SanPhamList_Result.cs">
+      <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GiaSP_Data.cs" />
+=======
     <Compile Include="Get_TKNhanVien_Result.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
     <Compile Include="Gia_DV.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
@@ -126,6 +136,7 @@
     <Compile Include="KhachHang.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang_Data.cs" />
     <Compile Include="LoaiSP_Data.cs" />
     <Compile Include="Loai_SP.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
@@ -163,6 +174,9 @@
     <Compile Include="SanPham.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="SanPham_Data.cs" />
+=======
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
@@ -174,6 +188,7 @@
       <DependentUpon>QL_CuaHang_Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Tai_Khoan_Data.cs" />
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="QL_CuaHang_Entities.edmx">

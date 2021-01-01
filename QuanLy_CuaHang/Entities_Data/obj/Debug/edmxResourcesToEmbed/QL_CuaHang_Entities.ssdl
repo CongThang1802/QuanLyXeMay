@@ -162,9 +162,13 @@
     <Property Name="ma_DM" Type="int" />
     <Property Name="ma_Loai" Type="int" />
     <Property Name="ma_Hang" Type="int" />
-    <Property Name="mau_SP" Type="ntext" />
+    <Property Name="ten_SP" Type="ntext" />
     <Property Name="soluong_SP" Type="int" />
   </EntityType>
+<<<<<<< HEAD
+  <Function Name="Get_GiaSPList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Get_SanPhamList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+=======
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -441,6 +445,7 @@
     <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
   <EntityContainer Name="CuaHang_XeMayModelStoreContainer">
     <EntitySet Name="ChucNang" EntityType="Self.ChucNang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CT_PhieuNhap" EntityType="Self.CT_PhieuNhap" Schema="dbo" store:Type="Tables" />

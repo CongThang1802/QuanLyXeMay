@@ -149,6 +149,9 @@
     <Compile Include="HoaDon\UC_HoaDon.Designer.cs">
       <DependentUpon>UC_HoaDon.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="KhachHang\UC_KHACHHANG_Tab.cs">
+=======
     <Compile Include="HoaDon\ViewTTHD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,10 +159,17 @@
       <DependentUpon>ViewTTHD.cs</DependentUpon>
     </Compile>
     <Compile Include="KhachHang\UC_KHACHHANG.cs">
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KhachHang\UC_KHACHHANG.Designer.cs">
-      <DependentUpon>UC_KHACHHANG.cs</DependentUpon>
+    <Compile Include="KhachHang\UC_KHACHHANG_Tab.Designer.cs">
+      <DependentUpon>UC_KHACHHANG_Tab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\UC_TT_KhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhachHang\UC_TT_KhachHang.Designer.cs">
+      <DependentUpon>UC_TT_KhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Mail.cs">
       <SubType>Form</SubType>
@@ -198,6 +208,12 @@
     <Compile Include="SanPham\Dialog\DAL_DanhMuc.Designer.cs">
       <DependentUpon>DAL_DanhMuc.cs</DependentUpon>
     </Compile>
+    <Compile Include="SanPham\Dialog\DAL_GiaSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SanPham\Dialog\DAL_GiaSP.Designer.cs">
+      <DependentUpon>DAL_GiaSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="SanPham\Dialog\DAL_HangSX.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,11 +232,23 @@
     <Compile Include="SanPham\Dialog\DAL_NhaCungCap.Designer.cs">
       <DependentUpon>DAL_NhaCungCap.cs</DependentUpon>
     </Compile>
+    <Compile Include="SanPham\Dialog\DAL_SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SanPham\Dialog\DAL_SanPham.Designer.cs">
+      <DependentUpon>DAL_SanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="SanPham\UC_DanhM_LoaiSP.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SanPham\UC_DanhM_LoaiSP.Designer.cs">
       <DependentUpon>UC_DanhM_LoaiSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SanPham\UC_GiaSP_TT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SanPham\UC_GiaSP_TT.Designer.cs">
+      <DependentUpon>UC_GiaSP_TT.cs</DependentUpon>
     </Compile>
     <Compile Include="SanPham\UC_NhaCC_HangSX.cs">
       <SubType>UserControl</SubType>
@@ -228,11 +256,17 @@
     <Compile Include="SanPham\UC_NhaCC_HangSX.Designer.cs">
       <DependentUpon>UC_NhaCC_HangSX.cs</DependentUpon>
     </Compile>
-    <Compile Include="SanPham\UC_SanPham.cs">
+    <Compile Include="SanPham\UC_SanPham_Tab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SanPham\UC_SanPham.Designer.cs">
-      <DependentUpon>UC_SanPham.cs</DependentUpon>
+    <Compile Include="SanPham\UC_SanPham_Tab.Designer.cs">
+      <DependentUpon>UC_SanPham_Tab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SanPham\UC_SanPham_TT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SanPham\UC_SanPham_TT.Designer.cs">
+      <DependentUpon>UC_SanPham_TT.cs</DependentUpon>
     </Compile>
     <Compile Include="SaoLuuDuLieu\UC_SaoLuu.cs">
       <SubType>UserControl</SubType>
@@ -272,11 +306,19 @@
     <EmbeddedResource Include="HoaDon\UC_HoaDon.resx">
       <DependentUpon>UC_HoaDon.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="KhachHang\UC_KHACHHANG_Tab.resx">
+      <DependentUpon>UC_KHACHHANG_Tab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\UC_TT_KhachHang.resx">
+      <DependentUpon>UC_TT_KhachHang.cs</DependentUpon>
+=======
     <EmbeddedResource Include="HoaDon\ViewTTHD.resx">
       <DependentUpon>ViewTTHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\UC_KHACHHANG.resx">
       <DependentUpon>UC_KHACHHANG.cs</DependentUpon>
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
     </EmbeddedResource>
     <EmbeddedResource Include="Mail.resx">
       <DependentUpon>Mail.cs</DependentUpon>
@@ -298,6 +340,9 @@
     <EmbeddedResource Include="SanPham\Dialog\DAL_DanhMuc.resx">
       <DependentUpon>DAL_DanhMuc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SanPham\Dialog\DAL_GiaSP.resx">
+      <DependentUpon>DAL_GiaSP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SanPham\Dialog\DAL_HangSX.resx">
       <DependentUpon>DAL_HangSX.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,14 +352,23 @@
     <EmbeddedResource Include="SanPham\Dialog\DAL_NhaCungCap.resx">
       <DependentUpon>DAL_NhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SanPham\Dialog\DAL_SanPham.resx">
+      <DependentUpon>DAL_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SanPham\UC_DanhM_LoaiSP.resx">
       <DependentUpon>UC_DanhM_LoaiSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SanPham\UC_GiaSP_TT.resx">
+      <DependentUpon>UC_GiaSP_TT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SanPham\UC_NhaCC_HangSX.resx">
       <DependentUpon>UC_NhaCC_HangSX.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SanPham\UC_SanPham.resx">
-      <DependentUpon>UC_SanPham.cs</DependentUpon>
+    <EmbeddedResource Include="SanPham\UC_SanPham_Tab.resx">
+      <DependentUpon>UC_SanPham_Tab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SanPham\UC_SanPham_TT.resx">
+      <DependentUpon>UC_SanPham_TT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SaoLuuDuLieu\UC_SaoLuu.resx">
       <DependentUpon>UC_SaoLuu.cs</DependentUpon>

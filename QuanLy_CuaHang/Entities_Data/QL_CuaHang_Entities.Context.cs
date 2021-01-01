@@ -42,6 +42,17 @@ namespace Entities_Data
         public virtual DbSet<Nha_CungCap> Nha_CungCap { get; set; }
         public virtual DbSet<PhieuNhap> PhieuNhap { get; set; }
         public virtual DbSet<SanPham> SanPham { get; set; }
+<<<<<<< HEAD
+    
+        public virtual ObjectResult<Get_SanPhamList_Result> Get_SanPhamList()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_SanPhamList_Result>("Get_SanPhamList");
+        }
+    
+        public virtual ObjectResult<Get_GiaSPList_Result> Get_GiaSPList()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_GiaSPList_Result>("Get_GiaSPList");
+=======
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<NhanVien> NhanVien { get; set; }
         public virtual DbSet<HD_BanHang> HD_BanHang { get; set; }
@@ -177,6 +188,7 @@ namespace Entities_Data
         public virtual ObjectResult<hd_Result> hd()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<hd_Result>("hd");
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
         }
     }
 }

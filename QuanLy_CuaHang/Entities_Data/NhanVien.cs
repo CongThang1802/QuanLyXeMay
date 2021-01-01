@@ -28,6 +28,8 @@ namespace Entities_Data
         public string mail_NV { get; set; }
         public string sdt_NV { get; set; }
         public string mk_DangNhap { get; set; }
+<<<<<<< HEAD
+=======
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HD_BanHang> HD_BanHang { get; set; }
@@ -37,5 +39,6 @@ namespace Entities_Data
         public virtual ICollection<PhieuNhap> PhieuNhap { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChucNang> ChucNang { get; set; }
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
     }
 }

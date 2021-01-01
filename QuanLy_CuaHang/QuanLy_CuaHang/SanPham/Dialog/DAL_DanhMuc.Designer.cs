@@ -157,6 +157,8 @@ namespace QuanLy_CuaHang.SanPham1.Dialog
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_TenDM);
             this.Controls.Add(this.txt_MaDM);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DAL_DanhMuc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thông tin danh mục";
