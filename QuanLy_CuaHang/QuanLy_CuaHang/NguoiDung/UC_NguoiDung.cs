@@ -19,13 +19,13 @@ namespace QuanLy_CuaHang.QL_NguoiDung
 
             dgv_TTNhanVien.ColumnHeadersHeight = 24;
 
-            dgv_TTNhanVien.Columns[0].HeaderText = "Mã";
-            dgv_TTNhanVien.Columns[1].HeaderText = "Họ tên";
-            dgv_TTNhanVien.Columns[2].HeaderText = "Mail";
-            dgv_TTNhanVien.Columns[3].HeaderText = "Số điện thoại";
+            //dgv_TTNhanVien.Columns[0].HeaderText = "Mã";
+            //dgv_TTNhanVien.Columns[1].HeaderText = "Họ tên";
+            //dgv_TTNhanVien.Columns[2].HeaderText = "Mail";
+            //dgv_TTNhanVien.Columns[3].HeaderText = "Số điện thoại";
 
-            dgv_TTNhanVien.Columns[0].Width = 50;
-            dgv_TTNhanVien.Columns[3].Width = 100;
+            //dgv_TTNhanVien.Columns[0].Width = 50;
+            //dgv_TTNhanVien.Columns[3].Width = 100;
 
             dgv_TTNhanVien.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(52, 128, 235);
             dgv_TTNhanVien.EnableHeadersVisualStyles = false;

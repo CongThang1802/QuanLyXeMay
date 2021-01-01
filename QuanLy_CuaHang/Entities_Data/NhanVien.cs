@@ -14,10 +14,31 @@ namespace Entities_Data
     
     public partial class NhanVien
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NhanVien()
+        {
+            this.HD_BanHang = new HashSet<HD_BanHang>();
+            this.HD_DichVu = new HashSet<HD_DichVu>();
+            this.PhieuNhap = new HashSet<PhieuNhap>();
+            this.ChucNang = new HashSet<ChucNang>();
+        }
+    
         public int ma_NV { get; set; }
         public string ten_NV { get; set; }
         public string mail_NV { get; set; }
         public string sdt_NV { get; set; }
         public string mk_DangNhap { get; set; }
+<<<<<<< HEAD
+=======
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HD_BanHang> HD_BanHang { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HD_DichVu> HD_DichVu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhieuNhap> PhieuNhap { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChucNang> ChucNang { get; set; }
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
     }
 }

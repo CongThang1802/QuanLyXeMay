@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CuaHang_XeMay" Class="DataClassesQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-FDSJIO2\SQLEXPRESS;Initial Catalog=CuaHang_XeMay;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" SettingsObjectName="QuanLy_CuaHang.Properties.Settings" SettingsPropertyName="CuaHang_XeMayConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ChucNang" Member="ChucNangs">
+    <Type Name="ChucNang">
+      <Column Name="ma_CN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_CN" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ma_UI" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ChucNang_CT_Quyen" Member="CT_Quyens" ThisKey="ma_CN" OtherKey="ma_CN" Type="CT_Quyen" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CT_PhieuNhap" Member="CT_PhieuNhaps">
+    <Type Name="CT_PhieuNhap">
+      <Column Name="ma_PN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ma_SP" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="gianhap_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="soluong_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tongtien_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PhieuNhap_CT_PhieuNhap" Member="PhieuNhap" ThisKey="ma_PN" OtherKey="ma_PN" Type="PhieuNhap" IsForeignKey="true" />
+      <Association Name="SanPham_CT_PhieuNhap" Member="SanPham" ThisKey="ma_SP" OtherKey="ma_SP" Type="SanPham" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CTHD_DichVu" Member="CTHD_DichVus">
+    <Type Name="CTHD_DichVu">
+      <Column Name="ma_HDDV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ma_DV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="gia_DV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="soluong_DV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tongtien_DV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DichVu_CTHD_DichVu" Member="DichVu" ThisKey="ma_DV" OtherKey="ma_DV" Type="DichVu" IsForeignKey="true" />
+      <Association Name="HD_DichVu_CTHD_DichVu" Member="HD_DichVu" ThisKey="ma_HDDV" OtherKey="ma_HDDV" Type="HD_DichVu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CT_Quyen" Member="CT_Quyens">
+    <Type Name="CT_Quyen">
+      <Column Name="ma_NV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ma_CN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="ChucNang_CT_Quyen" Member="ChucNang" ThisKey="ma_CN" OtherKey="ma_CN" Type="ChucNang" IsForeignKey="true" />
+      <Association Name="NhanVien_CT_Quyen" Member="NhanVien" ThisKey="ma_NV" OtherKey="ma_NV" Type="NhanVien" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CTHD_BanHang" Member="CTHD_BanHangs">
+    <Type Name="CTHD_BanHang">
+      <Column Name="ma_HD" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ma_SP" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="gia_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="soluong_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tongtien_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HD_BanHang_CTHD_BanHang" Member="HD_BanHang" ThisKey="ma_HD" OtherKey="ma_hd" Type="HD_BanHang" IsForeignKey="true" />
+      <Association Name="SanPham_CTHD_BanHang" Member="SanPham" ThisKey="ma_SP" OtherKey="ma_SP" Type="SanPham" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DanhMuc" Member="DanhMucs">
+    <Type Name="DanhMuc">
+      <Column Name="ma_DM" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_DM" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="DanhMuc_SanPham" Member="SanPhams" ThisKey="ma_DM" OtherKey="ma_DM" Type="SanPham" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DichVu" Member="DichVus">
+    <Type Name="DichVu">
+      <Column Name="ma_DV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_DV" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="mota_DV" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="DichVu_CTHD_DichVu" Member="CTHD_DichVus" ThisKey="ma_DV" OtherKey="ma_DV" Type="CTHD_DichVu" />
+      <Association Name="DichVu_Gia_DV" Member="Gia_DVs" ThisKey="ma_DV" OtherKey="ma_DV" Type="Gia_DV" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gia_DV" Member="Gia_DVs">
+    <Type Name="Gia_DV">
+      <Column Name="ma_GiaDV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_DV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gia_DV" Member="gia_DV1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngay_DBDV" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_KTDV" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="DichVu_Gia_DV" Member="DichVu" ThisKey="ma_DV" OtherKey="ma_DV" Type="DichVu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gia_SP" Member="Gia_SPs">
+    <Type Name="Gia_SP">
+      <Column Name="ma_GiaSP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gia_SP" Member="gia_SP1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngay_BDSP" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_KTSP" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="SanPham_Gia_SP" Member="SanPham" ThisKey="ma_SP" OtherKey="ma_SP" Type="SanPham" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hang_SX" Member="Hang_SXes">
+    <Type Name="Hang_SX">
+      <Column Name="ma_Hang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_Hang" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Hang_SX_SanPham" Member="SanPhams" ThisKey="ma_Hang" OtherKey="ma_Hang" Type="SanPham" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HD_BanHang" Member="HD_BanHangs">
+    <Type Name="HD_BanHang">
+      <Column Name="ma_hd" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ma_kh" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_nv" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngaylap_hd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="thanhtien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HD_BanHang_CTHD_BanHang" Member="CTHD_BanHangs" ThisKey="ma_hd" OtherKey="ma_HD" Type="CTHD_BanHang" />
+      <Association Name="KhachHang_HD_BanHang" Member="KhachHang" ThisKey="ma_kh" OtherKey="ma_KH" Type="KhachHang" IsForeignKey="true" />
+      <Association Name="NhanVien_HD_BanHang" Member="NhanVien" ThisKey="ma_nv" OtherKey="ma_NV" Type="NhanVien" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HD_DichVu" Member="HD_DichVus">
+    <Type Name="HD_DichVu">
+      <Column Name="ma_HDDV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_KH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_NV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="HD_DichVu_CTHD_DichVu" Member="CTHD_DichVus" ThisKey="ma_HDDV" OtherKey="ma_HDDV" Type="CTHD_DichVu" />
+      <Association Name="KhachHang_HD_DichVu" Member="KhachHang" ThisKey="ma_KH" OtherKey="ma_KH" Type="KhachHang" IsForeignKey="true" />
+      <Association Name="NhanVien_HD_DichVu" Member="NhanVien" ThisKey="ma_NV" OtherKey="ma_NV" Type="NhanVien" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhachHang" Member="KhachHangs">
+    <Type Name="KhachHang">
+      <Column Name="ma_KH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_HK" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="mail_KH" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="sdt_KH" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="KhachHang_HD_BanHang" Member="HD_BanHangs" ThisKey="ma_KH" OtherKey="ma_kh" Type="HD_BanHang" />
+      <Association Name="KhachHang_HD_DichVu" Member="HD_DichVus" ThisKey="ma_KH" OtherKey="ma_KH" Type="HD_DichVu" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Loai_SP" Member="Loai_SPs">
+    <Type Name="Loai_SP">
+      <Column Name="ma_Loai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_Loai" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Loai_SP_SanPham" Member="SanPhams" ThisKey="ma_Loai" OtherKey="ma_Loai" Type="SanPham" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Nha_CungCap" Member="Nha_CungCaps">
+    <Type Name="Nha_CungCap">
+      <Column Name="ma_NCC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_NCC" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Nha_CungCap_PhieuNhap" Member="PhieuNhaps" ThisKey="ma_NCC" OtherKey="ma_NCC" Type="PhieuNhap" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhanVien" Member="NhanViens">
+    <Type Name="NhanVien">
+      <Column Name="ma_NV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_NV" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="mail_NV" Type="System.String" DbType="varchar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="sdt_NV" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="mk_DangNhap" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="NhanVien_CT_Quyen" Member="CT_Quyens" ThisKey="ma_NV" OtherKey="ma_NV" Type="CT_Quyen" />
+      <Association Name="NhanVien_HD_BanHang" Member="HD_BanHangs" ThisKey="ma_NV" OtherKey="ma_nv" Type="HD_BanHang" />
+      <Association Name="NhanVien_HD_DichVu" Member="HD_DichVus" ThisKey="ma_NV" OtherKey="ma_NV" Type="HD_DichVu" />
+      <Association Name="NhanVien_PhieuNhap" Member="PhieuNhaps" ThisKey="ma_NV" OtherKey="ma_NV" Type="PhieuNhap" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhieuNhap" Member="PhieuNhaps">
+    <Type Name="PhieuNhap">
+      <Column Name="ma_PN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_NCC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_NV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngaylap_PN" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="isDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="PhieuNhap_CT_PhieuNhap" Member="CT_PhieuNhaps" ThisKey="ma_PN" OtherKey="ma_PN" Type="CT_PhieuNhap" />
+      <Association Name="Nha_CungCap_PhieuNhap" Member="Nha_CungCap" ThisKey="ma_NCC" OtherKey="ma_NCC" Type="Nha_CungCap" IsForeignKey="true" />
+      <Association Name="NhanVien_PhieuNhap" Member="NhanVien" ThisKey="ma_NV" OtherKey="ma_NV" Type="NhanVien" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SanPham" Member="SanPhams">
+    <Type Name="SanPham">
+      <Column Name="ma_SP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_DM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_Loai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_Hang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mau_SP" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="soluong_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SanPham_CT_PhieuNhap" Member="CT_PhieuNhaps" ThisKey="ma_SP" OtherKey="ma_SP" Type="CT_PhieuNhap" />
+      <Association Name="SanPham_CTHD_BanHang" Member="CTHD_BanHangs" ThisKey="ma_SP" OtherKey="ma_SP" Type="CTHD_BanHang" />
+      <Association Name="SanPham_Gia_SP" Member="Gia_SPs" ThisKey="ma_SP" OtherKey="ma_SP" Type="Gia_SP" />
+      <Association Name="DanhMuc_SanPham" Member="DanhMuc" ThisKey="ma_DM" OtherKey="ma_DM" Type="DanhMuc" IsForeignKey="true" />
+      <Association Name="Hang_SX_SanPham" Member="Hang_SX" ThisKey="ma_Hang" OtherKey="ma_Hang" Type="Hang_SX" IsForeignKey="true" />
+      <Association Name="Loai_SP_SanPham" Member="Loai_SP" ThisKey="ma_Loai" OtherKey="ma_Loai" Type="Loai_SP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.giasp" Method="giasp">
+    <ElementType Name="giaspResult">
+      <Column Name="ma_SP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_DM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_Loai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_Hang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mau_SP" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="soluong_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_GiaSP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_SP1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gia_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngay_BDSP" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_KTSP" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ma_DM1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_DM" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChiTiet_HD" Method="ChiTiet_HD">
+    <ElementType Name="ChiTiet_HDResult">
+      <Column Name="ma_HD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_NV" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ten_HK" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ten_DM" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="mau_SP" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="gia_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="soluong_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tongtien_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.hd" Method="hd">
+    <ElementType Name="hdResult">
+      <Column Name="ma_HD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_NV" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ten_HK" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ngaylap_HD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="thanhtien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.soluongsp" Method="soluongsp">
+    <Parameter Name="masp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="soluongspResult">
+      <Column Name="ma_SP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_DM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_Loai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_Hang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mau_SP" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="soluong_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_DM1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_DM" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.[Procedure]" Method="Procedure">
+    <Parameter Name="masp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ProcedureResult">
+      <Column Name="ma_SP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_DM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_Loai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_Hang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mau_SP" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="soluong_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.INSERT_CTHD" Method="INSERT_CTHD">
+    <Parameter Name="MAHD" Parameter="mAHD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MASP" Parameter="mASP" Type="System.Int32" DbType="Int" />
+    <Parameter Name="giasp" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SL" Parameter="sL" Type="System.Int32" DbType="Int" />
+    <Parameter Name="THANHTIEN" Parameter="tHANHTIEN" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UPDATE_ThanhTien" Method="UPDATE_ThanhTien">
+    <Parameter Name="MAHD" Parameter="mAHD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="THANHTIEN" Parameter="tHANHTIEN" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.selectsp" Method="selectsp">
+    <Parameter Name="masp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="selectspResult">
+      <Column Name="ma_DM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_DM" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.selectHoaDon" Method="selectHoaDon">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="selectHoaDonResult">
+      <Column Name="ma_HD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_KH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_NV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngaylap_HD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="thanhtien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Insert_HoaDon" Method="Insert_HoaDon">
+    <Parameter Name="mahd" Type="System.Int32" DbType="Int" />
+    <Parameter Name="makh" Type="System.Int32" DbType="Int" />
+    <Parameter Name="manv" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ngaylap" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="thanhtien" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.selectAll_CTHD" Method="selectAll_CTHD">
+    <Parameter Name="maHD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="masp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="selectAll_CTHDResult">
+      <Column Name="ma_HD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_SP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gia_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="soluong_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tongtien_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.updateSL_CTHD" Method="updateSL_CTHD">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="masp" Type="System.Int32" DbType="Int" />
+    <Parameter Name="gia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="soluong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="THANHTIEN" Parameter="tHANHTIEN" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UPDATE_TONGTIEN" Method="UPDATE_TONGTIEN">
+    <Parameter Name="MAHD" Parameter="mAHD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TONGTIEN" Parameter="tONGTIEN" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.selectCTHD" Method="selectCTHD">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <ElementType Name="selectCTHDResult">
+      <Column Name="MA_SP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_DM" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="soluong_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gia_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tongtien_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.delete_cthd" Method="delete_cthd">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MASP" Parameter="mASP" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updateSLT" Method="updateSLT">
+    <Parameter Name="masp" Type="System.Int32" DbType="Int" />
+    <Parameter Name="soluong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.delete_hd" Method="delete_hd">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.selectSP11" Method="selectSP11">
+    <Parameter Name="masp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="selectSP11Result">
+      <Column Name="ma_SP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_DM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_Loai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_Hang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mau_SP" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="soluong_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.hd_dv" Method="hd_dv">
+    <ElementType Name="hd_dvResult">
+      <Column Name="ma_HDDV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_DV" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ten_HK" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ten_NV" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="tongtien_DV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.searh_hddv" Method="searh_hddv">
+    <Parameter Name="TKKH" Parameter="tKKH" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="searh_hddvResult">
+      <Column Name="ma_HDDV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_DV" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ten_HK" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ten_NV" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="tongtien_DV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.search_hdBan" Method="search_hdBan">
+    <Parameter Name="search" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="search_hdBanResult">
+      <Column Name="ma_HD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_NV" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ten_HK" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ngaylap_HD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="thanhtien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.quenmk" Method="quenmk">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PASS" Parameter="pASS" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -14,7 +14,16 @@ namespace Entities_Data
     
     public partial class DanhMuc
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public DanhMuc()
+        {
+            this.SanPham = new HashSet<SanPham>();
+        }
+    
         public int ma_DM { get; set; }
         public string ten_DM { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SanPham> SanPham { get; set; }
     }
 }

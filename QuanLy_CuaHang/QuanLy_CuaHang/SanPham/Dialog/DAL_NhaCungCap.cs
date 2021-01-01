@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLy_CuaHang.SanPham.Dialog
+namespace QuanLy_CuaHang.SanPham1.Dialog
 {
     public partial class DAL_NhaCungCap : Form
     {

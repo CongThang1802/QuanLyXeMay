@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿// T4 code generation is enabled for model 'C:\Users\Black-Sky\Documents\GitHub\QuanLyXeMay\QuanLy_CuaHang\Entities_Data\QL_CuaHang_Entities.edmx'. 
+=======
+﻿// T4 code generation is enabled for model 'C:\Users\Ngoc Tin\Desktop\My project\QuanLy_CuaHang\Entities_Data\QL_CuaHang_Entities.edmx'. 
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

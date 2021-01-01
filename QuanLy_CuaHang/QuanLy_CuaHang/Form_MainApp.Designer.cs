@@ -35,21 +35,22 @@ namespace QuanLy_CuaHang
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnl_Select = new System.Windows.Forms.Panel();
+            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnl_NoiDung = new System.Windows.Forms.Panel();
+            this.lbl_NguoiDung = new Guna.UI.WinForms.GunaLabel();
+            this.gunaTileButton4 = new Guna.UI.WinForms.GunaTileButton();
+            this.gunaTileButton3 = new Guna.UI.WinForms.GunaTileButton();
+            this.gunaTileButton2 = new Guna.UI.WinForms.GunaTileButton();
+            this.gunaTileButton1 = new Guna.UI.WinForms.GunaTileButton();
             this.btn_HOADON = new Guna.UI.WinForms.GunaButton();
             this.btn_SANPHAM = new Guna.UI.WinForms.GunaButton();
             this.btn_KHACHHANG = new Guna.UI.WinForms.GunaButton();
             this.btn_THONGKE = new Guna.UI.WinForms.GunaButton();
             this.btn_NGUOIDUNG = new Guna.UI.WinForms.GunaButton();
             this.btn_DATA = new Guna.UI.WinForms.GunaButton();
-            this.pnl_Select = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.gunaTileButton1 = new Guna.UI.WinForms.GunaTileButton();
-            this.gunaTileButton2 = new Guna.UI.WinForms.GunaTileButton();
-            this.pnl_NoiDung = new System.Windows.Forms.Panel();
-            this.lbl_NguoiDung = new Guna.UI.WinForms.GunaLabel();
-            this.gunaTileButton3 = new Guna.UI.WinForms.GunaTileButton();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,6 +93,132 @@ namespace QuanLy_CuaHang
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(180, 315);
             this.flowLayoutPanel1.TabIndex = 9;
+            // 
+            // pnl_Select
+            // 
+            this.pnl_Select.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(97)))), ((int)(((byte)(204)))));
+            this.pnl_Select.Location = new System.Drawing.Point(1, 187);
+            this.pnl_Select.Name = "pnl_Select";
+            this.pnl_Select.Size = new System.Drawing.Size(10, 42);
+            this.pnl_Select.TabIndex = 8;
+            this.pnl_Select.Visible = false;
+            // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = this.panel1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel3.Location = new System.Drawing.Point(197, 47);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(884, 1);
+            this.panel3.TabIndex = 4;
+            // 
+            // pnl_NoiDung
+            // 
+            this.pnl_NoiDung.BackColor = System.Drawing.Color.White;
+            this.pnl_NoiDung.Location = new System.Drawing.Point(192, 50);
+            this.pnl_NoiDung.Name = "pnl_NoiDung";
+            this.pnl_NoiDung.Size = new System.Drawing.Size(894, 561);
+            this.pnl_NoiDung.TabIndex = 8;
+            // 
+            // lbl_NguoiDung
+            // 
+            this.lbl_NguoiDung.AutoSize = true;
+            this.lbl_NguoiDung.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbl_NguoiDung.Location = new System.Drawing.Point(221, 26);
+            this.lbl_NguoiDung.Name = "lbl_NguoiDung";
+            this.lbl_NguoiDung.Size = new System.Drawing.Size(69, 15);
+            this.lbl_NguoiDung.TabIndex = 9;
+            this.lbl_NguoiDung.Text = "nguoi dung";
+            // 
+            // gunaTileButton4
+            // 
+            this.gunaTileButton4.AnimationHoverSpeed = 0.07F;
+            this.gunaTileButton4.AnimationSpeed = 0.03F;
+            this.gunaTileButton4.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaTileButton4.BorderColor = System.Drawing.Color.Black;
+            this.gunaTileButton4.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaTileButton4.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
+            this.gunaTileButton4.ForeColor = System.Drawing.Color.White;
+            this.gunaTileButton4.Image = ((System.Drawing.Image)(resources.GetObject("gunaTileButton4.Image")));
+            this.gunaTileButton4.ImageSize = new System.Drawing.Size(28, 28);
+            this.gunaTileButton4.Location = new System.Drawing.Point(988, 18);
+            this.gunaTileButton4.Name = "gunaTileButton4";
+            this.gunaTileButton4.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.gunaTileButton4.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaTileButton4.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaTileButton4.OnHoverImage = null;
+            this.gunaTileButton4.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaTileButton4.Size = new System.Drawing.Size(30, 26);
+            this.gunaTileButton4.TabIndex = 11;
+            this.gunaTileButton4.Click += new System.EventHandler(this.gunaTileButton4_Click);
+            // 
+            // gunaTileButton3
+            // 
+            this.gunaTileButton3.AnimationHoverSpeed = 0.07F;
+            this.gunaTileButton3.AnimationSpeed = 0.03F;
+            this.gunaTileButton3.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaTileButton3.BorderColor = System.Drawing.Color.Black;
+            this.gunaTileButton3.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaTileButton3.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
+            this.gunaTileButton3.ForeColor = System.Drawing.Color.White;
+            this.gunaTileButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaTileButton3.Image")));
+            this.gunaTileButton3.ImageSize = new System.Drawing.Size(28, 28);
+            this.gunaTileButton3.Location = new System.Drawing.Point(197, 21);
+            this.gunaTileButton3.Name = "gunaTileButton3";
+            this.gunaTileButton3.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.gunaTileButton3.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaTileButton3.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaTileButton3.OnHoverImage = null;
+            this.gunaTileButton3.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaTileButton3.Size = new System.Drawing.Size(23, 24);
+            this.gunaTileButton3.TabIndex = 10;
+            // 
+            // gunaTileButton2
+            // 
+            this.gunaTileButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaTileButton2.AnimationSpeed = 0.03F;
+            this.gunaTileButton2.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaTileButton2.BorderColor = System.Drawing.Color.Black;
+            this.gunaTileButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaTileButton2.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
+            this.gunaTileButton2.ForeColor = System.Drawing.Color.White;
+            this.gunaTileButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaTileButton2.Image")));
+            this.gunaTileButton2.ImageSize = new System.Drawing.Size(28, 28);
+            this.gunaTileButton2.Location = new System.Drawing.Point(1056, 17);
+            this.gunaTileButton2.Name = "gunaTileButton2";
+            this.gunaTileButton2.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.gunaTileButton2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaTileButton2.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaTileButton2.OnHoverImage = null;
+            this.gunaTileButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaTileButton2.Size = new System.Drawing.Size(30, 30);
+            this.gunaTileButton2.TabIndex = 7;
+            this.gunaTileButton2.Click += new System.EventHandler(this.gunaTileButton2_Click);
+            // 
+            // gunaTileButton1
+            // 
+            this.gunaTileButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaTileButton1.AnimationSpeed = 0.03F;
+            this.gunaTileButton1.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaTileButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaTileButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaTileButton1.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
+            this.gunaTileButton1.ForeColor = System.Drawing.Color.White;
+            this.gunaTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaTileButton1.Image")));
+            this.gunaTileButton1.ImageSize = new System.Drawing.Size(28, 28);
+            this.gunaTileButton1.Location = new System.Drawing.Point(1024, 17);
+            this.gunaTileButton1.Name = "gunaTileButton1";
+            this.gunaTileButton1.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.gunaTileButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaTileButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaTileButton1.OnHoverImage = null;
+            this.gunaTileButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaTileButton1.Size = new System.Drawing.Size(30, 30);
+            this.gunaTileButton1.TabIndex = 6;
+            this.gunaTileButton1.Click += new System.EventHandler(this.gunaTileButton1_Click);
             // 
             // btn_HOADON
             // 
@@ -231,15 +358,6 @@ namespace QuanLy_CuaHang
             this.btn_DATA.Text = "Sao Lưu Dữ Liệu";
             this.btn_DATA.Click += new System.EventHandler(this.btn_ChucNang_Click);
             // 
-            // pnl_Select
-            // 
-            this.pnl_Select.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(97)))), ((int)(((byte)(204)))));
-            this.pnl_Select.Location = new System.Drawing.Point(1, 187);
-            this.pnl_Select.Name = "pnl_Select";
-            this.pnl_Select.Size = new System.Drawing.Size(10, 42);
-            this.pnl_Select.TabIndex = 8;
-            this.pnl_Select.Visible = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -250,107 +368,13 @@ namespace QuanLy_CuaHang
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.panel1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel3.Location = new System.Drawing.Point(197, 47);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(884, 1);
-            this.panel3.TabIndex = 4;
-            // 
-            // gunaTileButton1
-            // 
-            this.gunaTileButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaTileButton1.AnimationSpeed = 0.03F;
-            this.gunaTileButton1.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaTileButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaTileButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaTileButton1.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
-            this.gunaTileButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaTileButton1.Image")));
-            this.gunaTileButton1.ImageSize = new System.Drawing.Size(28, 28);
-            this.gunaTileButton1.Location = new System.Drawing.Point(1024, 17);
-            this.gunaTileButton1.Name = "gunaTileButton1";
-            this.gunaTileButton1.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.gunaTileButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaTileButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaTileButton1.OnHoverImage = null;
-            this.gunaTileButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaTileButton1.Size = new System.Drawing.Size(30, 30);
-            this.gunaTileButton1.TabIndex = 6;
-            this.gunaTileButton1.Click += new System.EventHandler(this.gunaTileButton1_Click);
-            // 
-            // gunaTileButton2
-            // 
-            this.gunaTileButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaTileButton2.AnimationSpeed = 0.03F;
-            this.gunaTileButton2.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaTileButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaTileButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaTileButton2.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
-            this.gunaTileButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaTileButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaTileButton2.Image")));
-            this.gunaTileButton2.ImageSize = new System.Drawing.Size(28, 28);
-            this.gunaTileButton2.Location = new System.Drawing.Point(1056, 17);
-            this.gunaTileButton2.Name = "gunaTileButton2";
-            this.gunaTileButton2.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.gunaTileButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaTileButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaTileButton2.OnHoverImage = null;
-            this.gunaTileButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaTileButton2.Size = new System.Drawing.Size(30, 30);
-            this.gunaTileButton2.TabIndex = 7;
-            this.gunaTileButton2.Click += new System.EventHandler(this.gunaTileButton2_Click);
-            // 
-            // pnl_NoiDung
-            // 
-            this.pnl_NoiDung.BackColor = System.Drawing.Color.White;
-            this.pnl_NoiDung.Location = new System.Drawing.Point(192, 50);
-            this.pnl_NoiDung.Name = "pnl_NoiDung";
-            this.pnl_NoiDung.Size = new System.Drawing.Size(894, 561);
-            this.pnl_NoiDung.TabIndex = 8;
-            // 
-            // lbl_NguoiDung
-            // 
-            this.lbl_NguoiDung.AutoSize = true;
-            this.lbl_NguoiDung.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbl_NguoiDung.Location = new System.Drawing.Point(221, 26);
-            this.lbl_NguoiDung.Name = "lbl_NguoiDung";
-            this.lbl_NguoiDung.Size = new System.Drawing.Size(69, 15);
-            this.lbl_NguoiDung.TabIndex = 9;
-            this.lbl_NguoiDung.Text = "nguoi dung";
-            // 
-            // gunaTileButton3
-            // 
-            this.gunaTileButton3.AnimationHoverSpeed = 0.07F;
-            this.gunaTileButton3.AnimationSpeed = 0.03F;
-            this.gunaTileButton3.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaTileButton3.BorderColor = System.Drawing.Color.Black;
-            this.gunaTileButton3.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaTileButton3.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
-            this.gunaTileButton3.ForeColor = System.Drawing.Color.White;
-            this.gunaTileButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaTileButton3.Image")));
-            this.gunaTileButton3.ImageSize = new System.Drawing.Size(28, 28);
-            this.gunaTileButton3.Location = new System.Drawing.Point(197, 21);
-            this.gunaTileButton3.Name = "gunaTileButton3";
-            this.gunaTileButton3.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.gunaTileButton3.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaTileButton3.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaTileButton3.OnHoverImage = null;
-            this.gunaTileButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaTileButton3.Size = new System.Drawing.Size(23, 24);
-            this.gunaTileButton3.TabIndex = 10;
-            // 
             // Form_MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1093, 618);
+            this.Controls.Add(this.gunaTileButton4);
             this.Controls.Add(this.gunaTileButton3);
             this.Controls.Add(this.lbl_NguoiDung);
             this.Controls.Add(this.pnl_NoiDung);
@@ -391,5 +415,6 @@ namespace QuanLy_CuaHang
         private Guna.UI.WinForms.GunaButton btn_DATA;
         private Guna.UI.WinForms.GunaButton btn_KHACHHANG;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI.WinForms.GunaTileButton gunaTileButton4;
     }
 }

@@ -14,8 +14,20 @@ namespace Entities_Data
     
     public partial class DichVu
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public DichVu()
+        {
+            this.CTHD_DichVu = new HashSet<CTHD_DichVu>();
+            this.Gia_DV = new HashSet<Gia_DV>();
+        }
+    
         public int ma_DV { get; set; }
         public string ten_DV { get; set; }
         public string mota_DV { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTHD_DichVu> CTHD_DichVu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Gia_DV> Gia_DV { get; set; }
     }
 }

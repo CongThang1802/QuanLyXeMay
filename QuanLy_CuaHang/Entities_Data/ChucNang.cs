@@ -14,8 +14,17 @@ namespace Entities_Data
     
     public partial class ChucNang
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ChucNang()
+        {
+            this.NhanVien = new HashSet<NhanVien>();
+        }
+    
         public int ma_CN { get; set; }
         public string ten_CN { get; set; }
         public string ma_UI { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NhanVien> NhanVien { get; set; }
     }
 }

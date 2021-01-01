@@ -1,5 +1,5 @@
 ﻿
-namespace QuanLy_CuaHang.SanPham.Dialog
+namespace QuanLy_CuaHang.SanPham1.Dialog
 {
     partial class DAL_HangSX
     {

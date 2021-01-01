@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CuaHang_XeMayModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ChucNang">
+    <Key>
+      <PropertyRef Name="ma_CN" />
+    </Key>
+    <Property Name="ma_CN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_CN" Type="ntext" />
+    <Property Name="ma_UI" Type="ntext" />
+  </EntityType>
   <EntityType Name="CT_PhieuNhap">
     <Key>
       <PropertyRef Name="ma_PN" />
@@ -40,14 +48,6 @@
     <Property Name="gia_DV" Type="int" />
     <Property Name="soluong_DV" Type="int" />
     <Property Name="tongtien_DV" Type="int" />
-  </EntityType>
-  <EntityType Name="ChucNang">
-    <Key>
-      <PropertyRef Name="ma_CN" />
-    </Key>
-    <Property Name="ma_CN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ten_CN" Type="ntext" />
-    <Property Name="ma_UI" Type="ntext" />
   </EntityType>
   <EntityType Name="DanhMuc">
     <Key>
@@ -100,6 +100,7 @@
     <Property Name="ma_NV" Type="int" />
     <Property Name="ngaylap_HD" Type="date" />
     <Property Name="isDelete" Type="bit" />
+    <Property Name="thanhtien" Type="int" />
   </EntityType>
   <EntityType Name="HD_DichVu">
     <Key>
@@ -164,14 +165,293 @@
     <Property Name="ten_SP" Type="ntext" />
     <Property Name="soluong_SP" Type="int" />
   </EntityType>
+<<<<<<< HEAD
   <Function Name="Get_GiaSPList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Get_SanPhamList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+=======
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="fk_cthd_sp">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="CTHD_BanHang" Type="Self.CTHD_BanHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="ma_SP" />
+      </Principal>
+      <Dependent Role="CTHD_BanHang">
+        <PropertyRef Name="ma_SP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cthdbh_hdbh">
+    <End Role="HD_BanHang" Type="Self.HD_BanHang" Multiplicity="1" />
+    <End Role="CTHD_BanHang" Type="Self.CTHD_BanHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HD_BanHang">
+        <PropertyRef Name="ma_HD" />
+      </Principal>
+      <Dependent Role="CTHD_BanHang">
+        <PropertyRef Name="ma_HD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cthddv_dv">
+    <End Role="DichVu" Type="Self.DichVu" Multiplicity="1" />
+    <End Role="CTHD_DichVu" Type="Self.CTHD_DichVu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DichVu">
+        <PropertyRef Name="ma_DV" />
+      </Principal>
+      <Dependent Role="CTHD_DichVu">
+        <PropertyRef Name="ma_DV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cthddv_hddv">
+    <End Role="HD_DichVu" Type="Self.HD_DichVu" Multiplicity="1" />
+    <End Role="CTHD_DichVu" Type="Self.CTHD_DichVu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HD_DichVu">
+        <PropertyRef Name="ma_HDDV" />
+      </Principal>
+      <Dependent Role="CTHD_DichVu">
+        <PropertyRef Name="ma_HDDV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ctpn_pn">
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="1" />
+    <End Role="CT_PhieuNhap" Type="Self.CT_PhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuNhap">
+        <PropertyRef Name="ma_PN" />
+      </Principal>
+      <Dependent Role="CT_PhieuNhap">
+        <PropertyRef Name="ma_PN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ctpn_sp">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="CT_PhieuNhap" Type="Self.CT_PhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="ma_SP" />
+      </Principal>
+      <Dependent Role="CT_PhieuNhap">
+        <PropertyRef Name="ma_SP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ctq_cn">
+    <End Role="ChucNang" Type="Self.ChucNang" Multiplicity="1" />
+    <End Role="CT_Quyen" Type="Self.CT_Quyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChucNang">
+        <PropertyRef Name="ma_CN" />
+      </Principal>
+      <Dependent Role="CT_Quyen">
+        <PropertyRef Name="ma_CN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ctq_nv">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="CT_Quyen" Type="Self.CT_Quyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="ma_NV" />
+      </Principal>
+      <Dependent Role="CT_Quyen">
+        <PropertyRef Name="ma_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_gdv_dv">
+    <End Role="DichVu" Type="Self.DichVu" Multiplicity="0..1" />
+    <End Role="Gia_DV" Type="Self.Gia_DV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DichVu">
+        <PropertyRef Name="ma_DV" />
+      </Principal>
+      <Dependent Role="Gia_DV">
+        <PropertyRef Name="ma_DV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_gsp_sp">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+    <End Role="Gia_SP" Type="Self.Gia_SP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="ma_SP" />
+      </Principal>
+      <Dependent Role="Gia_SP">
+        <PropertyRef Name="ma_SP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_hdbh_bh">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="HD_BanHang" Type="Self.HD_BanHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="ma_KH" />
+      </Principal>
+      <Dependent Role="HD_BanHang">
+        <PropertyRef Name="ma_KH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_hdbh_kh">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="HD_BanHang" Type="Self.HD_BanHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="ma_NV" />
+      </Principal>
+      <Dependent Role="HD_BanHang">
+        <PropertyRef Name="ma_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_hddv_kh">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="HD_DichVu" Type="Self.HD_DichVu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="ma_KH" />
+      </Principal>
+      <Dependent Role="HD_DichVu">
+        <PropertyRef Name="ma_KH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_hddv_nv">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="HD_DichVu" Type="Self.HD_DichVu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="ma_NV" />
+      </Principal>
+      <Dependent Role="HD_DichVu">
+        <PropertyRef Name="ma_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_pn_ncc">
+    <End Role="Nha_CungCap" Type="Self.Nha_CungCap" Multiplicity="0..1" />
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nha_CungCap">
+        <PropertyRef Name="ma_NCC" />
+      </Principal>
+      <Dependent Role="PhieuNhap">
+        <PropertyRef Name="ma_NCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_pn_nv">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="ma_NV" />
+      </Principal>
+      <Dependent Role="PhieuNhap">
+        <PropertyRef Name="ma_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sp_dm">
+    <End Role="DanhMuc" Type="Self.DanhMuc" Multiplicity="0..1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DanhMuc">
+        <PropertyRef Name="ma_DM" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="ma_DM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sp_hang">
+    <End Role="Hang_SX" Type="Self.Hang_SX" Multiplicity="0..1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hang_SX">
+        <PropertyRef Name="ma_Hang" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="ma_Hang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sp_loai">
+    <End Role="Loai_SP" Type="Self.Loai_SP" Multiplicity="0..1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loai_SP">
+        <PropertyRef Name="ma_Loai" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="ma_Loai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ChiTiet_HD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="CThd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="Get_TKNhanVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="value" Type="int" Mode="In" />
+  </Function>
+  <Function Name="hd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="nhavien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
   <EntityContainer Name="CuaHang_XeMayModelStoreContainer">
+    <EntitySet Name="ChucNang" EntityType="Self.ChucNang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CT_PhieuNhap" EntityType="Self.CT_PhieuNhap" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CT_Quyen" EntityType="Self.CT_Quyen" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CTHD_BanHang" EntityType="Self.CTHD_BanHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CTHD_DichVu" EntityType="Self.CTHD_DichVu" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ChucNang" EntityType="Self.ChucNang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DanhMuc" EntityType="Self.DanhMuc" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DichVu" EntityType="Self.DichVu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Gia_DV" EntityType="Self.Gia_DV" Schema="dbo" store:Type="Tables" />
@@ -185,5 +465,82 @@
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PhieuNhap" EntityType="Self.PhieuNhap" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_cthd_sp" Association="Self.fk_cthd_sp">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="CTHD_BanHang" EntitySet="CTHD_BanHang" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cthdbh_hdbh" Association="Self.fk_cthdbh_hdbh">
+      <End Role="HD_BanHang" EntitySet="HD_BanHang" />
+      <End Role="CTHD_BanHang" EntitySet="CTHD_BanHang" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cthddv_dv" Association="Self.fk_cthddv_dv">
+      <End Role="DichVu" EntitySet="DichVu" />
+      <End Role="CTHD_DichVu" EntitySet="CTHD_DichVu" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cthddv_hddv" Association="Self.fk_cthddv_hddv">
+      <End Role="HD_DichVu" EntitySet="HD_DichVu" />
+      <End Role="CTHD_DichVu" EntitySet="CTHD_DichVu" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ctpn_pn" Association="Self.fk_ctpn_pn">
+      <End Role="PhieuNhap" EntitySet="PhieuNhap" />
+      <End Role="CT_PhieuNhap" EntitySet="CT_PhieuNhap" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ctpn_sp" Association="Self.fk_ctpn_sp">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="CT_PhieuNhap" EntitySet="CT_PhieuNhap" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ctq_cn" Association="Self.fk_ctq_cn">
+      <End Role="ChucNang" EntitySet="ChucNang" />
+      <End Role="CT_Quyen" EntitySet="CT_Quyen" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ctq_nv" Association="Self.fk_ctq_nv">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="CT_Quyen" EntitySet="CT_Quyen" />
+    </AssociationSet>
+    <AssociationSet Name="fk_gdv_dv" Association="Self.fk_gdv_dv">
+      <End Role="DichVu" EntitySet="DichVu" />
+      <End Role="Gia_DV" EntitySet="Gia_DV" />
+    </AssociationSet>
+    <AssociationSet Name="fk_gsp_sp" Association="Self.fk_gsp_sp">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="Gia_SP" EntitySet="Gia_SP" />
+    </AssociationSet>
+    <AssociationSet Name="fk_hdbh_bh" Association="Self.fk_hdbh_bh">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="HD_BanHang" EntitySet="HD_BanHang" />
+    </AssociationSet>
+    <AssociationSet Name="fk_hdbh_kh" Association="Self.fk_hdbh_kh">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="HD_BanHang" EntitySet="HD_BanHang" />
+    </AssociationSet>
+    <AssociationSet Name="fk_hddv_kh" Association="Self.fk_hddv_kh">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="HD_DichVu" EntitySet="HD_DichVu" />
+    </AssociationSet>
+    <AssociationSet Name="fk_hddv_nv" Association="Self.fk_hddv_nv">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="HD_DichVu" EntitySet="HD_DichVu" />
+    </AssociationSet>
+    <AssociationSet Name="fk_pn_ncc" Association="Self.fk_pn_ncc">
+      <End Role="Nha_CungCap" EntitySet="Nha_CungCap" />
+      <End Role="PhieuNhap" EntitySet="PhieuNhap" />
+    </AssociationSet>
+    <AssociationSet Name="fk_pn_nv" Association="Self.fk_pn_nv">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="PhieuNhap" EntitySet="PhieuNhap" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sp_dm" Association="Self.fk_sp_dm">
+      <End Role="DanhMuc" EntitySet="DanhMuc" />
+      <End Role="SanPham" EntitySet="SanPham" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sp_hang" Association="Self.fk_sp_hang">
+      <End Role="Hang_SX" EntitySet="Hang_SX" />
+      <End Role="SanPham" EntitySet="SanPham" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sp_loai" Association="Self.fk_sp_loai">
+      <End Role="Loai_SP" EntitySet="Loai_SP" />
+      <End Role="SanPham" EntitySet="SanPham" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

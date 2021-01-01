@@ -13,6 +13,7 @@ namespace QuanLy_CuaHang
 {
     public partial class Form_MainApp : Form
     {
+        public Entities_Data.Get_TKNhanVien_Result tai_khoan_NV { get; set; }
         public Form_MainApp()
         {
             InitializeComponent();
@@ -21,7 +22,10 @@ namespace QuanLy_CuaHang
 
         private void gunaTileButton2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Form_LoginApp f1 = new Form_LoginApp();
+            this.Hide();
+            f1.Show();
+
         }
 
         private void gunaTileButton1_Click(object sender, EventArgs e)
@@ -45,7 +49,11 @@ namespace QuanLy_CuaHang
                     pnl_Select.Location = new Point(0, btn_THONGKE.Location.Y+183);
                     break;
                 case "btn_SANPHAM":
+<<<<<<< HEAD
                     pnl_NoiDung.Controls.Add(new SanPham.UC_SanPham_Tab());
+=======
+                    pnl_NoiDung.Controls.Add(new SanPham1.UC_SanPham());
+>>>>>>> 0fb4aef22cea214f3f5ca088e68450872987f252
                     pnl_Select.Location = new Point(0, btn_SANPHAM.Location.Y+183);
                     break;
                 case "btn_KHACHHANG":
@@ -61,6 +69,17 @@ namespace QuanLy_CuaHang
                     pnl_Select.Location = new Point(0, btn_DATA.Location.Y+183);
                     break;
             }
+        }
+
+        private void gunaImageButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaTileButton4_Click(object sender, EventArgs e)
+        {
+            Mail f = new Mail();
+            f.Visible = true;
         }
     }
 }

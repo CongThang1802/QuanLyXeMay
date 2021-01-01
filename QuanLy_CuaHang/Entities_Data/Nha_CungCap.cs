@@ -14,7 +14,16 @@ namespace Entities_Data
     
     public partial class Nha_CungCap
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Nha_CungCap()
+        {
+            this.PhieuNhap = new HashSet<PhieuNhap>();
+        }
+    
         public int ma_NCC { get; set; }
         public string ten_NCC { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhieuNhap> PhieuNhap { get; set; }
     }
 }

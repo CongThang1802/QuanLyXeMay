@@ -14,9 +14,20 @@ namespace Entities_Data
     
     public partial class HD_DichVu
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public HD_DichVu()
+        {
+            this.CTHD_DichVu = new HashSet<CTHD_DichVu>();
+        }
+    
         public int ma_HDDV { get; set; }
         public Nullable<int> ma_KH { get; set; }
         public Nullable<int> ma_NV { get; set; }
         public Nullable<bool> isDelete { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTHD_DichVu> CTHD_DichVu { get; set; }
+        public virtual KhachHang KhachHang { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
     }
 }

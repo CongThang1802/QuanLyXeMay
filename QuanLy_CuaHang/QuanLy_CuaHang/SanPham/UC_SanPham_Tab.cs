@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLy_CuaHang.SanPham
+namespace QuanLy_CuaHang.SanPham1
 {
     public partial class UC_SanPham_Tab : UserControl
     {
